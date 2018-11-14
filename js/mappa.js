@@ -67,7 +67,6 @@ function disegnaPiano(){
 	// disegna l'omino in una data posizione
 	disegnaCellaSpeciale(ominoX,ominoY,omino); 
 	// disegna l'arma in una data posizione
-	disegnaCellaSpeciale(armaX,armaY,ARMA);
 } 
 
 function generaPillole(){
@@ -75,7 +74,10 @@ function generaPillole(){
 	countPillole ++; //vanno raccolti tutti, meglio contarli
 	
 }
-
+function generaSpada(){
+    generaOggetto(ARMA);
+	
+}
 function generaOstacolo(){
 	generaOggetto(OSTACOLO);
 }
