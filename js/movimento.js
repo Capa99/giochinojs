@@ -46,11 +46,13 @@ function controllaCella(x,y){
 			energia = energia - DELTA_ENERGIA;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = SFONDO;
+         gameOver();
 			return true;
 		case BUCONERO:
 			energia=-1;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = BUCONERO;
+         gameOver();
 			return true;
 		default: 
 	      return true; 
