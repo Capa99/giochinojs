@@ -5,7 +5,7 @@
 <script type="text/javascript" src="js/movimento.js"></script>
 <script type="text/javascript" src="js/funzioni.js"></script>
 </head>
-<body onkeydown="checkKeyDown(event);" onkeypress="checkKeyPress(event)" >
+<body onkeydown="checkKeyDown(event);" onkeypress="checkKeyPress(event);"onload="generaSpada();disegnaPiano()">
 <h1 >ENERGIA: </h1><h1 id="energia">0</h1>
 <img id="c0_0" src="img1/0.jpg">
 <img id="c0_1" src="img1/0.jpg">
@@ -217,9 +217,8 @@
 <img id="c9_18" src="img1/0.jpg">
 <img id="c9_19" src="img1/0.jpg">
 <br>
-
-<body onload="disegnaOmino()"/>
-<body onload="generaSpada()"/>
+<frame onload="disegnaPiano()"/>
+<frame onload="generaSpada()"/>
 
 <input type="button" onClick="generaPillole()"     value="genera pillole" ></input>
 <input type="button" onClick="generaFunghi()"       value="genera funghi" ></input>
