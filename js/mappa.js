@@ -74,7 +74,10 @@ function generaPillole(){
 	countPillole ++; //vanno raccolti tutti, meglio contarli
 	
 }
-
+function generaSpada(){
+    generaOggetto(ARMA);
+	
+}
 function generaOstacolo(){
 	generaOggetto(OSTACOLO);
 }
