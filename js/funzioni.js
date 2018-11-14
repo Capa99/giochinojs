@@ -6,3 +6,7 @@ function generaSpada(){
     generaOggetto(ARMA);
 	
 }
+function generaBuchineri(){
+	generaOggetto(BUCONERO);
+}
+

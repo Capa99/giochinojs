@@ -48,8 +48,10 @@ function controllaCella(x,y){
 			piano[x][y] = SFONDO;
 			return true;
 		case BUCONERO:
-			
-		
+			energia=-1;
+			document.getElementById("energia").innerHTML=energia;
+			piano[x][y] = BUCONERO;
+			return true;
 		default: 
 	      return true; 
 	}
