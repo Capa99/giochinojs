@@ -47,6 +47,9 @@ function controllaCella(x,y){
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = SFONDO;
 			return true;
+		case BUCONERO:
+			
+		
 		default: 
 	      return true; 
 	}

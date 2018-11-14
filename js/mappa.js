@@ -16,6 +16,7 @@ var OSTACOLO=3;
 var FUNGO=4;
 var SFONDO = 0;
 var ARMA=2;
+var BUCONERO=6;
 
 var omino = "omino";
 var ominoConSpada = "ominoConSpada";
