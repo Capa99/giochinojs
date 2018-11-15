@@ -1,4 +1,4 @@
-function generaFunghi(){
+function generaFungo(){
     generaOggetto(FUNGO);
 	
 }
@@ -6,8 +6,12 @@ function generaSpada(){
     generaOggetto(ARMA);
 	
 }
-function generaBuchineri(){
+function generaBuconero(){
 	generaOggetto(BUCONERO);
+}
+
+function generaNemico(){
+	generaOggetto(NEMICO);
 }
 
 function gameOver(){

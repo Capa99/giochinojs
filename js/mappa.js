@@ -17,6 +17,7 @@ var FUNGO=4;
 var SFONDO = 0;
 var ARMA=2;
 var BUCONERO=6;
+var NEMICO=7;
 
 var omino = "omino";
 var ominoConSpada = "ominoConSpada";
@@ -69,7 +70,7 @@ function disegnaPiano(){
 	// disegna l'arma in una data posizione
 } 
 
-function generaPillole(){
+function generaPillola(){
     generaOggetto(PILLOLA);
 	countPillole ++; //vanno raccolti tutti, meglio contarli
 	
