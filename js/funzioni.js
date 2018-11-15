@@ -12,7 +12,7 @@ function generaBuchineri(){
 
 function gameOver(){
 			if (energia<0){
-				document.getElementById("energia").innerHTML="Game Over";
+				document.getElementById("energia").innerHTML="<img src=\"gameover.jpg\" >";
 			}
 }
 
