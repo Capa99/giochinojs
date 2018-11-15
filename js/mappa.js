@@ -85,12 +85,15 @@ function generaOstacolo(){
 
 function generaOggetto(valOggetto){
 do{
+	 var min=0; 
+    var maxr=R;  
+	var maxc=C;
+      
 	// si genera un indice di riga casuale tra 0 e R
-	var r = Math.random(); 
-	rx = Math.round( r * R);
+	rx = Math.floor(Math.random() * (+maxr - +min)) + +min;  
 	// si genera un indice di colonna casuale tra 0 e C
-	var c = Math.random(); 
-	ry = Math.round( c * C);
+	
+	ry = Math.floor(Math.random() * (+maxc - +min)) + +min;  
 	
 }while(	piano[rx][ry] != 0){
 	// utilizzando rx e rc si ha una posizione casuale nel piano di gioco
