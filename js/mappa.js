@@ -1,7 +1,10 @@
 // posizione iniziale dell'omino
 var ominoX = 0; 
 var ominoY = 0;
-
+var nemicox=3;
+var nemicoy=3;
+var ANY=6;
+var ANX=6;
 // posizione dell'arma
 var armaX = 9; 
 var armaY = 9;
