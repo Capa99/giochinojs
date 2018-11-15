@@ -40,7 +40,8 @@ function controllaCella(x,y){
 			countPillole--;
 			if (countPillole==0){
             document.getElementById("en").innerHTML="HAI VINTO!";
-				document.getElementById("energia").innerHTML="<img src=\"coppa.jpg\">";
+				document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
+            document.getElementById("energia").style.display="none";
 			}
 			return true;
 			case FUNGO:
