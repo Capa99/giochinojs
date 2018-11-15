@@ -39,7 +39,8 @@ function controllaCella(x,y){
 			piano[x][y] = SFONDO;
 			countPillole--;
 			if (countPillole==0){
-				document.getElementById("energia").innerHTML="<img src=\"coppa.jpg\" >";
+            document.getElementById("en").innerHTML="HAI VINTO!";
+				document.getElementById("energia").innerHTML="<img src=\"coppa.jpg\">";
 			}
 			return true;
 			case FUNGO:
