@@ -24,18 +24,19 @@ function gameOver(){
 			}
 }
 function spostaNemico (){
-
-	if (controllaCella(ANX, ANY)){
-
+	if (controllaCellaNemico(ANX, ANY)){
 		var daSrc = "c" +nemicox+"_"+nemicoy; 
 	    var aSrc  = "c" + ANX+"_"+ ANY;
 		console.log(daSrc + " " +aSrc);
-        piano[nemicox][nemicoy]=SFONDO;
-		document.getElementById(daSrc).src = pathImg +  piano[nemicox][nemicoy] + ".jpg";
+		piano[nemicox][nemicoy]=pastnemico;
+		document.getElementById(daSrc).src = pathImg +  piano[ANX][ANY] + ".jpg";
 		piano[ANX][ANY]=NEMICO;
 		nemicox= ANX;
 		nemicoy= ANY;
-		var min=1; 
+		
+		disegnaNemico();
+	}
+	var min=1; 
         var max=4;  
         var random =Math.floor(Math.random() * (+max - +min)) + +min;
 		if (random==1)
@@ -46,25 +47,27 @@ function spostaNemico (){
 			ANY=(ANY -1 + C)%C;
 		if (random==4)
 			ANY=(ANY +1 + C)%C;
-		disegnaNemico();
-	}
-	
 }
 function disegnaNemico(){
 	disegnaCellaSpeciale(nemicox,nemicoy,NEMICO);
 }
-function controllaCellaNemico(){
+function controllaCellaNemico(x,y){
 	switch (piano[x][y]){
 		case ARMA:
-			return true; 	
-		case OSTACOLO: 
+			pastnemico=ARMA;
+			return false; 	
+		case OSTACOLO:
+			spostaNemico();
 			return false;
 		case PILLOLA:
-			return true;
+			pastnemico=PILLOLA;
+			return false;
 		case FUNGO:
-			return true;
+			pastnemico=FUNGO;
+			return false;
 		case BUCONERO:
-			return true;
+			pastnemico=BUCONERO;
+			return false;
 		case omino:
 			if(omino == ominoConSpada){
 				piano[x][y] = SFONDO;
@@ -77,6 +80,7 @@ function controllaCellaNemico(){
 		 }
 			return true;
 		default: 
+			pastnemico=SFONDO;
 	      return true; 
 	}
 
