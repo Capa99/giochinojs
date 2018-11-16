@@ -56,7 +56,7 @@ function spostaNemico (){
 function disegnaNemico(){
 	disegnaCellaSpeciale(nemicox,nemicoy,NEMICO);
 }
-function controllaCellaNemico(x,y,valore){
+function controllaCellaNemico(x,y){
 	switch (piano[x][y]){
 		case ARMA:
 			pastnemico=ARMA;
@@ -83,7 +83,7 @@ function controllaCellaNemico(x,y,valore){
 				
 				return true;
 		case omino:
-			valore = NEMICO;
+			pastnemico = NEMICO;
 			energia=-1;
 			document.getElementById("energia").innerHTML=energia;			
 			gameOver();
