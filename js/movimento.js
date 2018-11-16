@@ -80,7 +80,9 @@ function sposta (daX,daY, aX,aY){
 		var daSrc = "c" +daX+"_"+daY; 
 	    var aSrc  = "c" + aX+"_"+ aY;
 		console.log(daSrc + " " +aSrc);
+		piano[daX][daY]=pastomino;
         document.getElementById(daSrc).src = pathImg +  piano[daX][daY] + ".jpg";
+		piano[aX][aY]=omino;
 		ominoX= aX;
 		ominoY= aY;
 		disegnaOmino();

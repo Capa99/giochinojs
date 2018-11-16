@@ -31,6 +31,7 @@ function spostaNemico (){
 		piano[nemicox][nemicoy]=pastnemico;
 		document.getElementById(daSrc).src = pathImg +  piano[ANX][ANY] + ".jpg";
 		piano[ANX][ANY]=NEMICO;
+		
 		nemicox= ANX;
 		nemicoy= ANY;
 		
@@ -51,7 +52,7 @@ function spostaNemico (){
 function disegnaNemico(){
 	disegnaCellaSpeciale(nemicox,nemicoy,NEMICO);
 }
-function controllaCellaNemico(x,y){
+function controllaCellaNemico(x,y,valore){
 	switch (piano[x][y]){
 		case ARMA:
 			pastnemico=ARMA;
@@ -68,19 +69,21 @@ function controllaCellaNemico(x,y){
 		case BUCONERO:
 			pastnemico=BUCONERO;
 			return false;
+		case ominoConSpada:		
+				pastnemico=SFONDO;		
+				NEMICO = SFONDO;
+				
+				
+				return true;
 		case omino:
-			if(omino == ominoConSpada){
-				piano[x][y] = SFONDO;
-				}
-				else{
+			valore = NEMICO;
 			energia=-1;
-			document.getElementById("energia").innerHTML=energia;
-			piano[x][y] = NEMICO;
-         gameOver();
-		 }
+			document.getElementById("energia").innerHTML=energia;			
+			gameOver();
+		 
 			return true;
 		default: 
-			pastnemico=SFONDO;
+			valore=SFONDO;
 	      return true; 
 	}
 
