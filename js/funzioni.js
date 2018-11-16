@@ -16,7 +16,7 @@ function generaPortale(){
 
 function generaNemico(){
 	//generaOggetto(NEMICO);
-	setInterval(spostaNemico,1000);
+	setInterval(spostaNemico,500);
 	
 }
 
@@ -59,22 +59,18 @@ function disegnaNemico(){
 function controllaCellaNemico(x,y){
 	switch (piano[x][y]){
 		case ARMA:
-			pastnemico=ARMA;
+			
 			return false; 	
 		case OSTACOLO:
 			spostaNemico();
 			return false;
 		case PILLOLA:
-			pastnemico=PILLOLA;
 			return false;
 		case FUNGO:
-			pastnemico=FUNGO;
 			return false;
 		case BUCONERO:
-			pastnemico=BUCONERO;
 			return false;
       case PORTALE:
-			pastnemico=PORTALE;
 			return false;
 		case ominoConSpada:		
 				pastnemico=SFONDO;		
