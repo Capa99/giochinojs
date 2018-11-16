@@ -10,6 +10,10 @@ function generaBuconero(){
 	generaOggetto(BUCONERO);
 }
 
+function generaPortale(){
+	generaOggetto(PORTALE);
+}
+
 function generaNemico(){
 	//generaOggetto(NEMICO);
 	setInterval(spostaNemico,1000);
@@ -68,6 +72,9 @@ function controllaCellaNemico(x,y,valore){
 			return false;
 		case BUCONERO:
 			pastnemico=BUCONERO;
+			return false;
+      case PORTALE:
+			pastnemico=PORTALE;
 			return false;
 		case ominoConSpada:		
 				pastnemico=SFONDO;		

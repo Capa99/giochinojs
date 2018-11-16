@@ -56,6 +56,9 @@ function controllaCella(x,y){
 			piano[x][y] = BUCONERO;
          gameOver();
 			return true;
+         case PORTALE:
+         piano[x][y] = SFONDO;
+			return true;
 		case NEMICO:
 			if(omino == ominoConSpada){
 				piano[x][y] = SFONDO;
