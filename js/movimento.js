@@ -45,6 +45,8 @@ function controllaCella(x,y){
 			}
 			return true;
 			case FUNGO:
+         var audio = new Audio("Roblox Death Sound Effect.mp3");
+         audio.play();
 			energia = energia - DELTA_ENERGIA;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = SFONDO;
