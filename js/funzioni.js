@@ -4,7 +4,6 @@ function generaFungo(){
 }
 function generaSpada(){
     generaOggetto(ARMA);
-	
 }
 function generaBuconero(){
 	generaOggetto(BUCONERO);
@@ -17,7 +16,6 @@ function generaPortale(){
 function generaNemico(){
 	//generaOggetto(NEMICO);
 	setInterval(spostaNemico,500);
-	
 }
 
 function gameOver(){
@@ -32,10 +30,8 @@ function spostaNemico (){
 		var daSrc = "c" +nemicox+"_"+nemicoy; 
 	    var aSrc  = "c" + ANX+"_"+ ANY;
 		console.log(daSrc + " " +aSrc);
-		piano[nemicox][nemicoy]=pastnemico;
-		document.getElementById(daSrc).src = pathImg +  piano[ANX][ANY] + ".jpg";
-		piano[ANX][ANY]=NEMICO;
-		
+
+		document.getElementById(daSrc).src = pathImg +  piano[nemicox][nemicoy] + ".jpg";
 		nemicox= ANX;
 		nemicoy= ANY;
 		
@@ -65,7 +61,7 @@ function controllaCellaNemico(x,y){
 			spostaNemico();
 			return false;
 		case PILLOLA:
-			return false;
+			return true;
 		case FUNGO:
 			return false;
 		case BUCONERO:
