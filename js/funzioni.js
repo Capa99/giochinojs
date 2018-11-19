@@ -105,7 +105,7 @@ function gameOver(){
 
 function barraEnergia() {
    var elem = document.getElementById("energia");   
-    if (energia == 180) {
+    if (energia == 200) {
     	document.getElementById("en").innerHTML="HAI VINTO!";
 		document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
       document.getElementById("energia").style.display="none";
