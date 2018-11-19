@@ -5,21 +5,23 @@
    #centro {text-align: center;}
    #logo {width: 300px; height: 200px;}
    #en {text-align: center; font-family: jokerman; color: #c0d031;}
-   #sfondoBarra {margin-left: 705px; width: 1302px; height: 30px; position: absolute; background-color: #ddd;}
-   #energia {margin-left: 705px; width: 30px; background-color: #4CAF50; height: 30px; position: relative;}
+   #centrosb {text-align: center; border: #3a8d0a; border-style: solid; border-width: 10px; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto;}
+   #sfondoBarra {width: 10px; height: 30px; position: absolute; background-color: #ddd;}
+   #energia {width: 680px; background-color: #4CAF50; height: 30px;}
    #gioco {text-align: center; border: #56340a; border-style: solid; border-width: 10px; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto;}
 </style>
 <script type="text/javascript" src="js/mappa.js"></script>
 <script type="text/javascript" src="js/movimento.js"></script>
 <script type="text/javascript" src="js/funzioni.js"></script>
-<script type="text/javascript" src="js/nemico.js"></script>
 </head>
 <body onkeydown="checkKeyDown(event);" onkeypress="checkKeyPress(event);"onload="generaSpada();disegnaPiano();" style="background-color:#3a8d0a">
 <p id="centro">
 <img id="logo" alt="gif" src="gioco.gif"></p>
 <h1 id="en">ENERGIA: </h1>
-<div id="sfondoBarra"></div>
-<div id="energia"></div>
+<div id="centrosb">
+<p id="sfondoBarra"></p>
+<p id="energia"></p>
+</div>
 <p id="gioco">
 
 <img id="c0_0" src="img1/0.jpg">
