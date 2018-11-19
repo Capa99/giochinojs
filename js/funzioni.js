@@ -118,12 +118,7 @@ function gameOver(){
 
 function barraEnergia() {
    var elem = document.getElementById("energia");   
-    if (energia == 200) {
-    	document.getElementById("en").innerHTML="HAI VINTO!";
-		document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
-      document.getElementById("energia").style.display="none";
-      document.getElementById("centrosb").style.display="none";   
-     }  else {
-      	elem.style.width = energia + '%'; // incremento dellӥnergia
-    }
+		perc+=100/pilloletot
+      	elem.style.width = perc + '%'; // incremento dellӥnergia
+   
 }

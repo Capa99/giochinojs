@@ -40,6 +40,8 @@ var pathImg = "img1/";
 var i=0;
 var j=0;
 var countPillole = 0;
+var pilloletot=0;
+var perc=0;
 
 // numero di righe e numero di colonne
 var R = 10; 
@@ -84,7 +86,8 @@ function disegnaPiano(){
 
 function generaPillola(){
     generaOggetto(PILLOLA);
-	countPillole ++; //vanno raccolti tutti, meglio contarli
+	countPillole ++; 
+	pilloletot++;//vanno raccolti tutti, meglio contarli
 	
 }
 
