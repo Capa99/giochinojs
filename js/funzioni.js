@@ -95,57 +95,13 @@ function calcolaNuovaPosizioneCacciatore(){
 }
 
 	}
-
-	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 function gameOver(){
 		document.getElementById("en").innerHTML="HAI PERSO!";
 		document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
 		document.getElementById("energia").style.display="none";
+      document.getElementById("centrosb").style.display="none";
 }// il this.nome coincide con il nome dell’immagine nel file system 
-
-
-
-
-
-
 
 function barraEnergia() {
    var elem = document.getElementById("energia");   
