@@ -24,7 +24,12 @@ var SFONDO = 0;
 var ARMA=2;
 var BUCONERO=6;
 var NEMICO=7;
-var PORTALE=5;
+var PORTALE1=5;
+var PORTALE2=9;
+var PORTALE2_X=6;
+var PORTALE2_Y=6;
+var PORTALE1_X=2;
+var PORTALE1_Y=3;
 
 var omino = "omino";
 var ominoConSpada = "ominoConSpada";

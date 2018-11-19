@@ -9,9 +9,16 @@ function generaBuconero(){
 	generaOggetto(BUCONERO);
 }
 
-function generaPortale(){
-	generaOggetto(PORTALE);
+function generaPortale1(){
+piano[PORTALE1_X][PORTALE1_Y]=PORTALE1;
+disegnaCella(PORTALE1_X,PORTALE1_Y);
 }
+
+function generaPortale2(){
+piano[PORTALE2_X][PORTALE2_Y]=PORTALE2;
+disegnaCella(PORTALE2_X,PORTALE2_Y);
+}
+
 function Cacciatore (x,y,nome){
 this.x=x; 
 this.y=y;

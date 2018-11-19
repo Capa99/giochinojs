@@ -67,19 +67,18 @@ function controllaCella(x,y){
 			piano[x][y] = BUCONERO;
 			gameOver();
 			return true;
-         case PORTALE:
-         piano[x][y] = SFONDO;
-			return true;
-		case NEMICO:
-			if(omino == ominoConSpada){
-				piano[x][y] = SFONDO;
-			}
-			else{
-					document.getElementById("energia").innerHTML=energia;
-					piano[x][y] = NEMICO;
-					gameOver();
-			}
-			return true;
+		case PORTALE1: 
+			disegnaCella(ominoX,ominoY);  // disegna lo sfondo nella posizione di Omino
+			ominoX = PORTALE2_X; 
+			ominoY = PORTALE2_Y;
+			disegnaOmino();
+			return false;  
+		case PORTALE2:
+			disegnaCella(ominoX,ominoY);		
+			ominoX = PORTALE1_X; 
+			ominoY = PORTALE1_Y; 
+			disegnaOmino();
+			return false; 
 		default: 
 	      return true; 
 	}
