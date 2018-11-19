@@ -87,9 +87,13 @@ function calcolaNuovaPosizioneCacciatore(){
 		document.getElementById("c"+this.x+"_"+this.y).src= pathImg+this.nome + ".jpg"; 
 			}}
 			if (this.x == ominoX && this.y == ominoY ){
-				if (omino==ominoConSpada)
-					clearInterval(intervallo);
+				if (omino==ominoConSpada){
+               var audio3 = new Audio("Demon Scream.mp3");
+            audio3.play();
+            clearInterval(intervallo);
+            }
 				else{
+               
 				gameOver();
 				}
 }
@@ -97,6 +101,8 @@ function calcolaNuovaPosizioneCacciatore(){
 	}
 	
 function gameOver(){
+   var audio4 = new Audio("Evil Laugh.mp3");
+            audio4.play();
 		document.getElementById("en").innerHTML="HAI PERSO!";
 		document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
 		document.getElementById("energia").style.display="none";

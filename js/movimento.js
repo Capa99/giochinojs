@@ -28,12 +28,18 @@ function checkKeyPress (event){
 function controllaCella(x,y){
 	switch (piano[x][y]){
 		case ARMA:
+      var audio4 = new Audio("Sword Draw Sound Effect.mp3");
+			audio4.play();
 			omino = ominoConSpada;
 			piano[x][y] = SFONDO; 
 			return true; 	
 		case OSTACOLO: 
+      var audio = new Audio("Roblox Death Sound Effect.mp3");
+			audio.play();
 			return false;
 		case PILLOLA:
+      var audio1 = new Audio("Magic Wand Sound Effect.mp3");
+			audio1.play();
 			energia = energia + DELTA_ENERGIA;
 			barraEnergia();
 			piano[x][y] = SFONDO;
@@ -46,8 +52,8 @@ function controllaCella(x,y){
 			}
 			return true;
 			case FUNGO:
-				var audio = new Audio("Roblox Death Sound Effect.mp3");
-				audio.play();
+				var audio2 = new Audio("Male Cough Sound Effect.mp3");
+            audio2.play();
 				energia = energia - DELTA_ENERGIA;
 				barraEnergia();
 				piano[x][y] = SFONDO;
@@ -55,6 +61,8 @@ function controllaCella(x,y){
 					gameOver();
 			return true;
 		case BUCONERO:
+      var audio5 = new Audio("Black Hole.mp3");
+          audio5.play();
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = BUCONERO;
 			gameOver();
