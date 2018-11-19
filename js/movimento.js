@@ -45,6 +45,8 @@ function controllaCella(x,y){
 			piano[x][y] = SFONDO;
 			countPillole--;
 			if (countPillole==0){
+            var audio7 = new Audio("Hallelujah Chorus Sound Effect.mp3");
+            audio7.play();
             document.getElementById("en").innerHTML="HAI VINTO!";
 				document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
             document.getElementById("energia").style.display="none";
@@ -68,12 +70,16 @@ function controllaCella(x,y){
 			gameOver();
 			return true;
 		case PORTALE1: 
+      var audio6 = new Audio("Time Warp Sound Effect.mp3");
+          audio6.play();
 			disegnaCella(ominoX,ominoY);  // disegna lo sfondo nella posizione di Omino
 			ominoX = PORTALE2_X; 
 			ominoY = PORTALE2_Y;
 			disegnaOmino();
 			return false;  
 		case PORTALE2:
+      var audio6 = new Audio("Time Warp Sound Effect.mp3");
+          audio6.play();
 			disegnaCella(ominoX,ominoY);		
 			ominoX = PORTALE1_X; 
 			ominoY = PORTALE1_Y; 
