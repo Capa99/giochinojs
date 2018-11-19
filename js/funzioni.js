@@ -29,18 +29,7 @@ this.nome=nome;
 	
 
 
-function calcolaNuovaPosizioneCacciatore(){
-	if(this.x > ominoX) {
-		this.x ++;
-	} else {
-		this.x--;
-	}
-	if(this.y > ominoY) {
-		this.y ++;
-	} else {
-		this.y--;
-	}
-}
+
 
 
 
@@ -122,3 +111,20 @@ function barraEnergia() {
       	elem.style.width = perc + '%'; // incremento dellӥnergia
    
 }
+
+function barraClessidra() {
+  var elem = document.getElementById("myBar");   
+  var width = 100;
+  var id = setInterval(frame, 30); // per una barra che avanza con il tempo
+  function frame() { // esempi di inner function 
+    if (width == 0) {
+      clearInterval(id); // TEMPO SCADUTO, gestire l'evento (per esempio game over o vita)
+	  clearInterval(clessidra);
+	  gameOver();
+    } else {
+      width--;  // DECREMENTO IL TEMPO
+      elem.style.width = width + '%'; 
+    }
+	}
+	}
+var clessidra=setInterval("barraClessidra()",1000);

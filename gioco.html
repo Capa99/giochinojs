@@ -10,6 +10,7 @@
    #barraCompletamento {width: 0px; background-color: #4CAF50; height: 30px; position: relative;}
    #gioco {text-align: center; border: #56340a; border-style: solid; border-width: 10px; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto;}
    #energia {font-family: jokerman; color: #c0d031; font-size: 50px;}
+   #myBar { position: absolute; background-color: #ddd;}
 </style>
 <script type="text/javascript" src="js/mappa.js"></script>
 <script type="text/javascript" src="js/movimento.js"></script>
@@ -18,11 +19,13 @@
 <body onkeydown="checkKeyDown(event);" onkeypress="checkKeyPress(event);"onload="generaSpada();disegnaPiano();" style="background-color:#3a8d0a">
 <p id="centro">
 <img id="logo" alt="gif" src="gioco.gif"></p>
-<h1 id="en">ENERGIA: </h1>
+
 <div id="centrosb">
 <p id="sfondoBarra"></p>
 <p id="barraCompletamento"></p>
-
+<p id="myBar"></p>
+<br>
+<h1 id="en">ENERGIA: </h1>
 <p id="energia">0</p>
 </div>
 <p id="gioco">
