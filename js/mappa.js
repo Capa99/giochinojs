@@ -17,7 +17,7 @@ var energia =0;
 
 // costanti e parametri per la configurazioen del gioco
 var PILLOLA = 1;
-var DELTA_ENERGIA = 20;
+var DELTA_ENERGIA = 10;
 var OSTACOLO=3; 
 var FUNGO=4;
 var SFONDO = 0;

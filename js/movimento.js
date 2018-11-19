@@ -42,6 +42,7 @@ function controllaCella(x,y){
             document.getElementById("en").innerHTML="HAI VINTO!";
 				document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
             document.getElementById("energia").style.display="none";
+            document.getElementById("centrosb").style.display="none";
 			}
 			return true;
 			case FUNGO:
