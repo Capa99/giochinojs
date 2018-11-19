@@ -41,6 +41,7 @@ function controllaCella(x,y){
       var audio1 = new Audio("Magic Wand Sound Effect.mp3");
 			audio1.play();
 			energia = energia + DELTA_ENERGIA;
+			document.getElementById("energia").innerHTML=energia;
 			barraEnergia();
 			piano[x][y] = SFONDO;
 			countPillole--;
@@ -55,9 +56,9 @@ function controllaCella(x,y){
 			return true;
 			case FUNGO:
 				var audio2 = new Audio("Male Cough Sound Effect.mp3");
-            audio2.play();
+				audio2.play();
 				energia = energia - DELTA_ENERGIA;
-				barraEnergia();
+				document.getElementById("energia").innerHTML=energia;
 				piano[x][y] = SFONDO;
 				if(energia<0)	
 					gameOver();

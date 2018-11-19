@@ -112,12 +112,12 @@ function gameOver(){
             audio4.play();
 		document.getElementById("en").innerHTML="HAI PERSO!";
 		document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
-		document.getElementById("energia").style.display="none";
+		document.getElementById("barraCompletamento").style.display="none";
       document.getElementById("centrosb").style.display="none";
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
 function barraEnergia() {
-   var elem = document.getElementById("energia");   
+   var elem = document.getElementById("barraCompletamento");   
 		perc+=100/pilloletot
       	elem.style.width = perc + '%'; // incremento dellӥnergia
    
