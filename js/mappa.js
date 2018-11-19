@@ -7,6 +7,7 @@ var ANY=6;
 var ANX=6;
 var pastnemico=0;
 var pastomino=0;
+var width = 0;
 // posizione dell'arma
 var armaX = 9; 
 var armaY = 9;

@@ -14,8 +14,8 @@ function generaPortale(){
 }
 
 function generaNemico(){
-	//generaOggetto(NEMICO);
-	setInterval(spostaNemico,500);
+	n1 = new Nemico(3,3,NEMICO);
+	setInterval(n1.insegui,500);
 }
 
 function gameOver(){
@@ -35,7 +35,7 @@ function spostaNemico (){
 		nemicox= ANX;
 		nemicoy= ANY;
 		
-		disegnaNemico();
+		disegnaCellaSpeciale(nemicox,nemicoy,NEMICO);
 	}
 	var min=1; 
         var max=4;  
@@ -49,47 +49,39 @@ function spostaNemico (){
 		if (random==4)
 			ANY=(ANY +1 + C)%C;
 }
-function disegnaNemico(){
-	disegnaCellaSpeciale(nemicox,nemicoy,NEMICO);
-}
 function controllaCellaNemico(x,y){
-	switch (piano[x][y]){
-		case ARMA:
-			
-			return false; 	
-		case OSTACOLO:
-			spostaNemico();
-			return false;
-		case PILLOLA:
-			return true;
-		case FUNGO:
-			return false;
-		case BUCONERO:
-			return false;
-      case PORTALE:
-			return false;
-		case ominoConSpada:		
-				pastnemico=SFONDO;		
-				NEMICO = SFONDO;
-				
-				
-				return true;
-		case omino:
-			pastnemico = NEMICO;
-			energia=-1;
-			document.getElementById("energia").innerHTML=energia;			
-			gameOver();
-		 
-			return true;
-		default: 
-			valore=SFONDO;
-	      return true; 
-	}
+var precX = this.x;
+	var precY = this.y;
 
-	return true;
+var newX = this.x; 
+var newY = this.y; 
+
+if (this.x < ominoX) { newX = this.x +1; }
+if (this.x > ominoX) { newX = this.x - 1; }
+
+if (this.y < ominoY) {newY = this.y +1;}
+ if (this.y > ominoY) {newY = this.y - 1;}
+
+// adesso prima di spostare controlliamo che non ci sia un ostacolo nella cella: 
+
+if (piano[newX][newY]!=OSTACOLO){
+// assume la nuova posizione
+this.x = newX; 
+this.y = newY;
+// si disegna il cacciatore nella nuova cella
+document.getElementById(“c”+precX+”_“+precY).src   = piano[precX][precY ] + “.jpg”;
+document.getElementById(“c”+this.x+”_“+this.y).src    = this.nome + “.jpg”; 
 }
 
-var width = 0;
+// il this.nome coincide con il nome dell’immagine nel file system 
+
+if (this.x == ominoX && this.y == ominoY ){
+    gameOver();
+}
+
+}
+
+
 
 function barraEnergia() {
    var elem = document.getElementById("energia");   
