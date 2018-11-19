@@ -64,13 +64,12 @@ function controllaCella(x,y){
 		case NEMICO:
 			if(omino == ominoConSpada){
 				piano[x][y] = SFONDO;
-				}
-				else{
-			energia=-1;
-			document.getElementById("energia").innerHTML=energia;
-			piano[x][y] = NEMICO;
-         gameOver();
-		 }
+			}
+			else{
+					document.getElementById("energia").innerHTML=energia;
+					piano[x][y] = NEMICO;
+					gameOver();
+			}
 			return true;
 		default: 
 	      return true; 
