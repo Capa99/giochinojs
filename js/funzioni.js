@@ -18,7 +18,7 @@ this.y=y;
 this.nome=nome;
 }
 	n1 = new Cacciatore(4,2,NEMICO);
-	setInterval("n1.insegui()", 800);
+	var intervallo=setInterval("n1.insegui()", 800);
 	
 
 
@@ -86,6 +86,15 @@ function calcolaNuovaPosizioneCacciatore(){
 		document.getElementById("c"+precX+"_"+precY).src=pathImg+piano[precX][precY] + ".jpg";
 		document.getElementById("c"+this.x+"_"+this.y).src= pathImg+this.nome + ".jpg"; 
 			}}
+			if (this.x == ominoX && this.y == ominoY ){
+				if (omino==ominoConSpada)
+					clearInterval(intervallo);
+				else{
+				energia=-1;
+				gameOver();
+				}
+}
+
 	}
 
 	
