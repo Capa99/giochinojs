@@ -105,8 +105,11 @@ function gameOver(){
 
 function barraEnergia() {
    var elem = document.getElementById("energia");   
-    if (energia == 100) {
-    	// energia al massimo, non si pu򠰩񠩮crementare, gestire eventuale vittoria o altro.   
+    if (energia == 180) {
+    	document.getElementById("en").innerHTML="HAI VINTO!";
+		document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
+      document.getElementById("energia").style.display="none";
+      document.getElementById("centrosb").style.display="none";   
      }  else {
       	elem.style.width = energia + '%'; // incremento dellӥnergia
     }
