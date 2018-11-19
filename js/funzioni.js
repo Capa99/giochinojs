@@ -90,7 +90,6 @@ function calcolaNuovaPosizioneCacciatore(){
 				if (omino==ominoConSpada)
 					clearInterval(intervallo);
 				else{
-				energia=-1;
 				gameOver();
 				}
 }
@@ -137,11 +136,9 @@ function calcolaNuovaPosizioneCacciatore(){
 	
 	
 function gameOver(){
-			if (energia<0){
-            document.getElementById("en").innerHTML="HAI PERSO!";
-				document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
-				document.getElementById("energia").style.display="none";
-			}
+		document.getElementById("en").innerHTML="HAI PERSO!";
+		document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
+		document.getElementById("energia").style.display="none";
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
 

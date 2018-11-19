@@ -45,18 +45,18 @@ function controllaCella(x,y){
 			}
 			return true;
 			case FUNGO:
-         var audio = new Audio("Roblox Death Sound Effect.mp3");
-         audio.play();
-			energia = energia - DELTA_ENERGIA;
-			barraEnergia();
-			piano[x][y] = SFONDO;
-         gameOver();
+				var audio = new Audio("Roblox Death Sound Effect.mp3");
+				audio.play();
+				energia = energia - DELTA_ENERGIA;
+				barraEnergia();
+				piano[x][y] = SFONDO;
+				if(energia<0)	
+					gameOver();
 			return true;
 		case BUCONERO:
-			energia=-1;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = BUCONERO;
-         gameOver();
+			gameOver();
 			return true;
          case PORTALE:
          piano[x][y] = SFONDO;
