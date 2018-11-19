@@ -88,3 +88,14 @@ function controllaCellaNemico(x,y){
 
 	return true;
 }
+
+var width = 0;
+
+function barraEnergia() {
+   var elem = document.getElementById("energia");   
+    if (energia == 100) {
+    	// energia al massimo, non si pu򠰩񠩮crementare, gestire eventuale vittoria o altro.   
+     }  else {
+      	elem.style.width = energia + '%'; // incremento dellӥnergia
+    }
+}

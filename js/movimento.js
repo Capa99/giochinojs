@@ -35,7 +35,7 @@ function controllaCella(x,y){
 			return false;
 		case PILLOLA:
 			energia = energia + DELTA_ENERGIA;
-			document.getElementById("energia").innerHTML=energia;
+			barraEnergia();
 			piano[x][y] = SFONDO;
 			countPillole--;
 			if (countPillole==0){
@@ -48,7 +48,7 @@ function controllaCella(x,y){
          var audio = new Audio("Roblox Death Sound Effect.mp3");
          audio.play();
 			energia = energia - DELTA_ENERGIA;
-			document.getElementById("energia").innerHTML=energia;
+			barraEnergia();
 			piano[x][y] = SFONDO;
          gameOver();
 			return true;
