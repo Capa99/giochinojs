@@ -3,10 +3,6 @@ var ominoX = 0;
 var ominoY = 0;
 var nemicox=3;
 var nemicoy=3;
-var ANY=6;
-var ANX=6;
-var pastnemico=0;
-var pastomino=0;
 var width = 0;
 // posizione dell'arma
 var armaX = 9; 
@@ -57,10 +53,6 @@ for (var i=0; i<R; i++) {
 	}
 }
 
-// posizionamento di un ostacolo per esempio
-//piano[4][4] = OSTACOLO;
-//piano[armaX][armaY] = ARMA;
-
 function mostraMatriceHTML(){
 	var s = "";
 
@@ -81,7 +73,6 @@ function disegnaPiano(){
 	}
 	// disegna l'omino in una data posizione
 	disegnaCellaSpeciale(ominoX,ominoY,omino); 
-	// disegna l'arma in una data posizione
 } 
 
 function generaPillola(){
