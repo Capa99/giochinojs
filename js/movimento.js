@@ -49,7 +49,7 @@ function controllaCella(x,y){
             var audio7 = new Audio("Hallelujah Chorus Sound Effect.mp3");
             audio7.rewindAndPlay();
             document.getElementById("en").innerHTML="HAI VINTO!";
-				document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
+			document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
             document.getElementById("energia").style.display="none";
             document.getElementById("centrosb").style.display="none";
             document.getElementById("myBar").style.display="none";

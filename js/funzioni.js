@@ -44,16 +44,15 @@ this.nome=nome;
 		if (this.x < ominoX) { newX = this.x +1; }
 		if (this.x > ominoX) { newX = this.x - 1; }
 		if (this.y < ominoY) {newY = this.y +1;}
-		if (this.y > ominoY) {newY = this.y - 1;}
-		
+		if (this.y > ominoY) {newY = this.y - 1;}		
 		// adesso prima di spostare controlliamo che non ci sia un ostacolo nella cella: 
 		if (piano[newX][newY]!=OSTACOLO){
 		// assume la nuova posizione
-		this.x = newX; 
-		this.y = newY;
+			this.x = newX; 
+			this.y = newY;
 		// si disegna il cacciatore nella nuova cella
-		document.getElementById("c"+precX+"_"+precY).src=pathImg+piano[precX][precY] + ".jpg";
-		document.getElementById("c"+this.x+"_"+this.y).src= pathImg+this.nome + ".jpg"; 
+			document.getElementById("c"+precX+"_"+precY).src=pathImg+piano[precX][precY] + ".jpg";
+			document.getElementById("c"+this.x+"_"+this.y).src= pathImg+this.nome + ".jpg"; 
 	}
 	
 }	
@@ -76,13 +75,13 @@ this.nome=nome;
 			newX=(newY +1 + C)%C;
 		
 		if (piano[newX][newY]!=OSTACOLO){
-		this.x= newX;
-		this.y= newY;
-		
-		document.getElementById("c"+precX+"_"+precY).src=pathImg+piano[precX][precY] + ".jpg";
-		document.getElementById("c"+this.x+"_"+this.y).src= pathImg+this.nome + ".jpg"; 
-			}}
-			if (this.x == ominoX && this.y == ominoY ){
+			this.x= newX;
+			this.y= newY;		
+			document.getElementById("c"+precX+"_"+precY).src=pathImg+piano[precX][precY] + ".jpg";
+			document.getElementById("c"+this.x+"_"+this.y).src= pathImg+this.nome + ".jpg"; 
+		}
+	}
+	if (this.x == ominoX && this.y == ominoY ){
 				if (omino==ominoConSpada){
                var audio3 = new Audio("Demon Scream.mp3");
             audio3.rewindAndPlay();
