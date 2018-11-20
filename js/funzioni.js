@@ -103,6 +103,8 @@ function gameOver(){
 		document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
 		document.getElementById("barraCompletamento").style.display="none";
       document.getElementById("centrosb").style.display="none";
+      document.getElementById("myBar").style.display="none";
+      document.getElementById("energia").style.display="none";
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
 function barraEnergia() {
