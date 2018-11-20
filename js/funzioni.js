@@ -98,19 +98,19 @@ this.nome=nome;
 	
 function gameOver(){
    var audio4 = new Audio("Evil Laugh.mp3");
-            audio4.rewindAndPlay();
+			audio4.rewindAndPlay();
 		document.getElementById("en").innerHTML="HAI PERSO!";
 		document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
 		document.getElementById("barraCompletamento").style.display="none";
-      document.getElementById("centrosb").style.display="none";
-      document.getElementById("myBar").style.display="none";
-      document.getElementById("energia").style.display="none";
+	  document.getElementById("centrosb").style.display="none";
+	  document.getElementById("myBar").style.display="none";
+	  document.getElementById("energia").style.display="none";
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
 function barraEnergia() {
    var elem = document.getElementById("barraCompletamento");   
 		perc+=100/pilloletot
-      	elem.style.width = perc + '%'; // incremento dellӥnergia
+		elem.style.width = perc + '%'; // incremento dellӥnergia
    
 }
 
@@ -119,31 +119,31 @@ function barraClessidra() {
   var width = 100;
   var id = setInterval(fram, 1000); // per una barra che avanza con il tempo
   function fram() { // esempi di inner function 
-    if (width == 0) {
-      clearInterval(id); // TEMPO SCADUTO, gestire l'evento (per esempio game over o vita)
+	if (width == 0) {
+	  clearInterval(id); // TEMPO SCADUTO, gestire l'evento (per esempio game over o vita)
 	  gameOver();
-    } else {
-      width--;  // DECREMENTO IL TEMPO
-      elem.style.width = width + '%'; 
-    }
+	} else {
+	  width--;  // DECREMENTO IL TEMPO
+	  elem.style.width = width + '%'; 
+	}
 	}
 	}
 window.addEventListener("load",disegnaPiano,true);
 window.addEventListener("load",generaSpada,true);
 window.addEventListener("load",barraClessidra,true);
 
-	window.addEventListener("load",function(){
+window.addEventListener("load",function(){
 	
 	document.getElementById("btnsu").addEventListener("click",su,false);
 	document.getElementById("btngiu").addEventListener("click",giu,false);
 	document.getElementById("btndx").addEventListener("click",destra,false);
 	document.getElementById("btnsx").addEventListener("click",sinistra,false);
-	document.getElementById("gpillola").addEventListener("click",generaPillola,false);
+	/* document.getElementById("gpillola").addEventListener("click",generaPillola,false);
 	document.getElementById("gfungo").addEventListener("click",generaFungo,false);
 	document.getElementById("gbuco").addEventListener("click",generaBuconero,false);
 	document.getElementById("gportale1").addEventListener("click",generaPortale1,false);
 	document.getElementById("gportale2").addEventListener("click",generaPortale2,false);
-	document.getElementById("gostacolo").addEventListener("click",generaOstacolo,false);
+	document.getElementById("gostacolo").addEventListener("click",generaOstacolo,false); */
 	
 	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
 	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
@@ -156,4 +156,51 @@ this.pause();
 this.currentTime = 0.0; 
 this.play();
 }
+function livello1(){
+	piano[1][0]=OSTACOLO;
+	piano[1][1]=OSTACOLO;
+	piano[1][6]=OSTACOLO;
+	piano[1][7]=OSTACOLO;
+	piano[1][10]=OSTACOLO;
+	piano[1][17]=OSTACOLO;
+	piano[1][18]=OSTACOLO;
+	piano[1][19]=OSTACOLO;
+	piano[2][6]=OSTACOLO;
+	piano[3][6]=OSTACOLO;
+	piano[3][15]=OSTACOLO;
+	piano[4][6]=OSTACOLO;
+	piano[4][15]=OSTACOLO;
+	piano[5][3]=OSTACOLO;
+	piano[5][4]=OSTACOLO;
+	piano[5][5]=OSTACOLO;
+	piano[5][6]=OSTACOLO;
+	piano[5][15]=OSTACOLO;
+	piano[6][3]=OSTACOLO;
+	piano[6][15]=OSTACOLO;
+	piano[6][16]=OSTACOLO;
+	piano[6][17]=OSTACOLO;
+	piano[6][18]=OSTACOLO;
+	piano[7][3]=OSTACOLO;
+	piano[7][18]=OSTACOLO;
+	piano[8][3]=OSTACOLO;
+	piano[8][7]=OSTACOLO;
+	piano[8][8]=OSTACOLO;
+	piano[8][9]=OSTACOLO;
+	piano[8][10]=OSTACOLO;
+	piano[8][13]=OSTACOLO;
+	piano[8][18]=OSTACOLO;
+	piano[9][3]=OSTACOLO;
+	piano[9][13]=OSTACOLO;
+	piano[9][18]=OSTACOLO;
+	
+		for (var i=0; i<R; i++){
+		for (var j=0; j<C;j++){
+			disegnaCella(i,j);
+		}
+	}
+	
+	
 
+
+	
+}
