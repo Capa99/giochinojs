@@ -29,17 +29,17 @@ function controllaCella(x,y){
 	switch (piano[x][y]){
 		case ARMA:
       var audio4 = new Audio("Sword Draw Sound Effect.mp3");
-			audio4.play();
+			audio4.rewindAndPlay();
 			omino = ominoConSpada;
 			piano[x][y] = SFONDO; 
 			return true; 	
 		case OSTACOLO: 
       var audio = new Audio("Roblox Death Sound Effect.mp3");
-			audio.play();
+			audio.rewindAndPlay();
 			return false;
 		case PILLOLA:
       var audio1 = new Audio("Magic Wand Sound Effect.mp3");
-			audio1.play();
+			audio1.rewindAndPlay();
 			energia = energia + DELTA_ENERGIA;
 			document.getElementById("energia").innerHTML=energia;
 			barraEnergia();
@@ -47,7 +47,7 @@ function controllaCella(x,y){
 			countPillole--;
 			if (countPillole==0){
             var audio7 = new Audio("Hallelujah Chorus Sound Effect.mp3");
-            audio7.play();
+            audio7.rewindAndPlay();
             document.getElementById("en").innerHTML="HAI VINTO!";
 				document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
             document.getElementById("energia").style.display="none";
@@ -57,7 +57,7 @@ function controllaCella(x,y){
 			return true;
 			case FUNGO:
 				var audio2 = new Audio("Male Cough Sound Effect.mp3");
-				audio2.play();
+				audio2.rewindAndPlay();
 				energia = energia - DELTA_ENERGIA;
 				document.getElementById("energia").innerHTML=energia;
 				piano[x][y] = SFONDO;
@@ -66,14 +66,14 @@ function controllaCella(x,y){
 			return true;
 		case BUCONERO:
       var audio5 = new Audio("Black Hole.mp3");
-          audio5.play();
+          audio5.rewindAndPlay();
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = BUCONERO;
 			gameOver();
 			return true;
 		case PORTALE1: 
       var audio6 = new Audio("Time Warp Sound Effect.mp3");
-          audio6.play();
+          audio6.rewindAndPlay();
 			disegnaCella(ominoX,ominoY);  // disegna lo sfondo nella posizione di Omino
 			ominoX = PORTALE2_X; 
 			ominoY = PORTALE2_Y;
@@ -81,7 +81,7 @@ function controllaCella(x,y){
 			return false;  
 		case PORTALE2:
       var audio6 = new Audio("Time Warp Sound Effect.mp3");
-          audio6.play();
+          audio6.rewindAndPlay();
 			disegnaCella(ominoX,ominoY);		
 			ominoX = PORTALE1_X; 
 			ominoY = PORTALE1_Y; 

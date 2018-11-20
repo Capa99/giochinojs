@@ -85,7 +85,7 @@ this.nome=nome;
 			if (this.x == ominoX && this.y == ominoY ){
 				if (omino==ominoConSpada){
                var audio3 = new Audio("Demon Scream.mp3");
-            audio3.play();
+            audio3.rewindAndPlay();
             clearInterval(intervallo);
             }
 				else{
@@ -98,7 +98,7 @@ this.nome=nome;
 	
 function gameOver(){
    var audio4 = new Audio("Evil Laugh.mp3");
-            audio4.play();
+            audio4.rewindAndPlay();
 		document.getElementById("en").innerHTML="HAI PERSO!";
 		document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
 		document.getElementById("barraCompletamento").style.display="none";
@@ -150,3 +150,10 @@ window.addEventListener("load",barraClessidra,true);
 	
 	}
 );
+
+Audio.prototype.rewindAndPlay = function() { 
+this.pause();
+this.currentTime = 0.0; 
+this.play();
+}
+
