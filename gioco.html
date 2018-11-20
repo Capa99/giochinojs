@@ -11,12 +11,13 @@
    #gioco {text-align: center; border: #56340a; border-style: solid; border-width: 10px; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto;}
    #energia {font-family: jokerman; color: #c0d031; font-size: 50px;}
    #myBar { position: absolute; background-color: #ddd;}
+   #body {background-color:#3a8d0a;}
 </style>
 <script type="text/javascript" src="js/mappa.js"></script>
 <script type="text/javascript" src="js/movimento.js"></script>
 <script type="text/javascript" src="js/funzioni.js"></script>
 </head>
-<body onkeydown="checkKeyDown(event);" onkeypress="checkKeyPress(event);"onload="generaSpada();disegnaPiano(), barraClessidra();" style="background-color:#3a8d0a">
+<body id="body">
 <p id="centro">
 <img id="logo" alt="gif" src="gioco.gif"></p>
 
@@ -243,14 +244,12 @@
 
 </p>
 <p align="center">
-<input type="button" onClick="generaPillola()"     value="genera pillola"></input>
-<input type="button" onClick="generaNemico()"     value="genera nemico"></input>
-<input type="button" onClick="generaFungo()"       value="genera fungo"></input>
-<input type="button" onClick="generaOstacolo()"     value="genera ostacolo"></input>
-<input type="button" onClick="generaBuconero()"     value="genera un buco nero"></input>
-<input type="button" onClick="generaPortale1()"  value="genera primo portale"></input>
-<input type="button" onClick="generaPortale2()"  value="genera secondo portale"></input>
-<input type="button" onClick="mostraMatriceHTML()"  value="mostra matrice"></input>
+<input id="gpillola" type="button" value="genera pillola"></input>
+<input id="gfungo" type="button" value="genera fungo"></input>
+<input id="gostacolo" type="button" value="genera ostacolo"></input>
+<input id="gbuco" type="button" value="genera un buco nero"></input>
+<input id="gportale1"type="button" value="genera primo portale"></input>
+<input id="gportale2"type="button" value="genera secondo portale"></input>
 <br> <br> <br>
 
 <img id="btnsu" src="su.jpg"></img> <br>

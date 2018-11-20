@@ -126,11 +126,25 @@ function barraClessidra() {
     }
 	}
 	}
+window.addEventListener("load",disegnaPiano,true);
+window.addEventListener("load",generaSpada,true);
+window.addEventListener("load",barraClessidra,true);
 
+	window.addEventListener("load",function(){
 	
-	window.addEventListener('load',function(){
-	document.getElementById("bottone").addEventListener("click",generaPillola,false);
+	document.getElementById("btnsu").addEventListener("click",su,false);
+	document.getElementById("btngiu").addEventListener("click",giu,false);
+	document.getElementById("btndx").addEventListener("click",destra,false);
+	document.getElementById("btnsx").addEventListener("click",sinistra,false);
+	document.getElementById("gpillola").addEventListener("click",generaPillola,false);
+	document.getElementById("gfungo").addEventListener("click",generaFungo,false);
+	document.getElementById("gbuco").addEventListener("click",generaBuconero,false);
+	document.getElementById("gportale1").addEventListener("click",generaPortale1,false);
+	document.getElementById("gportale2").addEventListener("click",generaPortale2,false);
+	document.getElementById("gostacolo").addEventListener("click",generaOstacolo,false);
 	
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
 	
 	}
 );
