@@ -115,11 +115,10 @@ function barraEnergia() {
 function barraClessidra() {
   var elem = document.getElementById("myBar");   
   var width = 100;
-  var id = setInterval(frame, 30); // per una barra che avanza con il tempo
-  function frame() { // esempi di inner function 
+  var id = setInterval(fram, 1000); // per una barra che avanza con il tempo
+  function fram() { // esempi di inner function 
     if (width == 0) {
       clearInterval(id); // TEMPO SCADUTO, gestire l'evento (per esempio game over o vita)
-	  clearInterval(clessidra);
 	  gameOver();
     } else {
       width--;  // DECREMENTO IL TEMPO
@@ -127,4 +126,3 @@ function barraClessidra() {
     }
 	}
 	}
-var clessidra=setInterval("barraClessidra()",1000);
