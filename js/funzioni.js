@@ -126,3 +126,11 @@ function barraClessidra() {
     }
 	}
 	}
+
+	
+	window.addEventListener('load',function(){
+	document.getElementById("bottone").addEventListener("click",generaPillola,false);
+	
+	
+	}
+);
