@@ -50,6 +50,7 @@ function controllaCella(x,y){
             audio7.rewindAndPlay();
             document.getElementById("en").innerHTML="HAI VINTO!";
 			document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
+			document.getElementById("lvl").style.display="block";
             document.getElementById("energia").style.display="none";
             document.getElementById("centrosb").style.display="none";
             document.getElementById("myBar").style.display="none";

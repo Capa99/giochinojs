@@ -1,0 +1,71 @@
+window.addEventListener("load",livello1,true);
+window.addEventListener("load",disegnaPiano,true);
+
+
+function livello1(){
+	piano[1][0]=OSTACOLO;
+	piano[1][1]=OSTACOLO;
+	piano[1][6]=OSTACOLO;
+	piano[1][7]=OSTACOLO;
+	piano[1][10]=OSTACOLO;
+	piano[1][17]=OSTACOLO;
+	piano[1][18]=OSTACOLO;
+	piano[1][19]=OSTACOLO;
+	piano[2][6]=OSTACOLO;
+	piano[3][6]=OSTACOLO;
+	piano[3][15]=OSTACOLO;
+	piano[4][6]=OSTACOLO;
+	piano[4][15]=OSTACOLO;
+	piano[5][3]=OSTACOLO;
+	piano[5][4]=OSTACOLO;
+	piano[5][5]=OSTACOLO;
+	piano[5][6]=OSTACOLO;
+	piano[5][15]=OSTACOLO;
+	piano[6][3]=OSTACOLO;
+	piano[6][15]=OSTACOLO;
+	piano[6][16]=OSTACOLO;
+	piano[6][17]=OSTACOLO;
+	piano[6][18]=OSTACOLO;
+	piano[7][3]=OSTACOLO;
+	piano[7][18]=OSTACOLO;
+	piano[8][3]=OSTACOLO;
+	piano[8][7]=OSTACOLO;
+	piano[8][8]=OSTACOLO;
+	piano[8][9]=OSTACOLO;
+	piano[8][10]=OSTACOLO;
+	piano[8][13]=OSTACOLO;
+	piano[8][18]=OSTACOLO;
+	piano[9][3]=OSTACOLO;
+	piano[9][13]=OSTACOLO;
+	piano[9][18]=OSTACOLO;
+	piano[2][4]=FUNGO;
+	piano[2][13]=FUNGO;
+	piano[3][1]=FUNGO;
+	piano[3][17]=FUNGO;
+	piano[3][19]=FUNGO;
+	piano[4][10]=FUNGO;
+	piano[5][8]=FUNGO;
+	piano[6][0]=FUNGO;
+	piano[6][6]=FUNGO;
+	piano[7][9]=FUNGO;
+	piano[7][12]=FUNGO;
+	piano[1][15]=PILLOLA;
+	piano[3][7]=PILLOLA;
+	piano[7][17]=PILLOLA;
+	piano[7][2]=PILLOLA;
+	piano[9][9]=PILLOLA;
+	countPillole=5;
+	pilloletot=5;
+	piano[4][14]=BUCONERO;
+	piano[8][2]=BUCONERO;
+	piano[9][8]=BUCONERO;
+	piano[0][1]=PORTALE1;
+	PORTALE1_X=0;
+	PORTALE1_Y=1;
+	piano[9][19]=PORTALE2;
+	PORTALE2_X=9;
+	PORTALE2_Y=19;
+	
+}
+
+

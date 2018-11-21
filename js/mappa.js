@@ -74,6 +74,7 @@ function disegnaPiano(){
 	}
 	// disegna l'omino in una data posizione
 	disegnaCellaSpeciale(ominoX,ominoY,omino); 
+	document.getElementById("lvl").style.display="none";
 } 
 
 function generaPillola(){
