@@ -131,7 +131,6 @@ function disegnaCellaSpeciale(i,j,valore) {
 
 function disegnaOmino() {
 	disegnaCellaSpeciale(ominoX,ominoY,omino);
-	document.getElementById("posizioneOmino").innerHTML=" coordinate omino: Omino(" + ominoX + "," + ominoY + ")"; 
 } 
 
 
