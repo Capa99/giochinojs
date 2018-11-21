@@ -109,21 +109,29 @@ function sposta (daX,daY, aX,aY){
 }
 
 function su(){
-	var newX = (ominoX -1 + R)%R; 
-	sposta (ominoX,ominoY, newX,ominoY);
+	if(ominoX>0){
+		var newX = (ominoX -1 + R)%R; 
+		sposta (ominoX,ominoY, newX,ominoY);
+	}
 }
 
 function sinistra(){
-	var newY = (ominoY -1 + C)%C; 
-	sposta (ominoX,ominoY, ominoX,newY);
+	if(ominoY>0){
+		var newY = (ominoY -1 + C)%C; 
+		sposta (ominoX,ominoY, ominoX,newY);
+		}
 }
 
 function giu(){
-	var newX = (ominoX + 1 + R)%R; 
-	sposta (ominoX,ominoY, newX,ominoY);
+	if(ominoX<R-1){
+		var newX = (ominoX + 1 + R)%R; 
+		sposta (ominoX,ominoY, newX,ominoY);
+		}
 }
 
 function destra(){
-	var newY = (ominoY + 1 + C)%C; 
-	sposta (ominoX,ominoY, ominoX,newY);
+	if(ominoY<C-1){
+		var newY = (ominoY + 1 + C)%C; 
+		sposta (ominoX,ominoY, ominoX,newY);
+		}
 }
