@@ -93,6 +93,8 @@ this.nome=nome;
 	
 function gameOver(){
 clearInterval(id);
+           clearInterval(intervallo);
+		              clearInterval(intervallo2);
    var audio4 = new Audio("Evil Laugh.mp3");
 			audio4.rewindAndPlay();
 		document.getElementById("en").innerHTML="HAI PERSO!";
@@ -103,6 +105,9 @@ clearInterval(id);
 	  document.getElementById("energia").style.display="none";
 	  document.getElementById("btntouch").style.display="none";
 	  document.getElementById("riprova").style.display="block";
+       document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
+	
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
 function barraEnergia() {

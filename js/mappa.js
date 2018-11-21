@@ -33,6 +33,8 @@ var ominoConSpada = "ominoConSpada";
 var intervallo=null;
 var intervallo2=null;
 var id=null;
+var down=null;
+var press=null;
 
 var pathImg = "img1/";
 
