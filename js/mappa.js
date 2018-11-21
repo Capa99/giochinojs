@@ -29,6 +29,7 @@ var PORTALE1_Y=3;
 
 var omino = "omino";
 var ominoConSpada = "ominoConSpada";
+var intervallo=null;
 
 var pathImg = "img1/";
 

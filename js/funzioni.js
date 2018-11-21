@@ -24,10 +24,7 @@ this.x=x;
 this.y=y;
 this.nome=nome;
 }
-function standard1(){
-	n1 = new Cacciatore(4,2,NEMICO);
-	var intervallo=setInterval("n1.insegui()", 800);
-}
+
 
 
 
@@ -129,7 +126,7 @@ function barraClessidra() {
 	}
 	}
 	}
-window.addEventListener("load",livello1,true);
+window.addEventListener("load",livello2,true);
 window.addEventListener("load",disegnaPiano,true);
 window.addEventListener("load",barraClessidra,true);
 
@@ -223,6 +220,7 @@ function livello1(){
 }
 
 function livello2(){
+
 	piano[0][16]=OSTACOLO;
 	piano[1][16]=OSTACOLO;
 	piano[2][16]=OSTACOLO;
@@ -274,7 +272,8 @@ function livello2(){
 	piano[7][17]=PORTALE2;
 	PORTALE2_X=7;
 	PORTALE2_Y=17;
-   n1 = new Cacciatore(4,18);
-   var intervallo = setInterval("n1.insegui()",800);
+   n1=new Cacciatore(4,18,NEMICO);
+    intervallo=setInterval("n1.insegui()",800);
    piano[9][9]=ARMA;
+   
 }
