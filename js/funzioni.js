@@ -129,6 +129,7 @@ function barraClessidra() {
 	}
 	}
 	}
+window.addEventListener("load",livello1,true);
 window.addEventListener("load",disegnaPiano,true);
 window.addEventListener("load",barraClessidra,true);
 
@@ -214,16 +215,14 @@ function livello1(){
 	piano[8][2]=BUCONERO;
 	piano[9][8]=BUCONERO;
 	piano[0][1]=PORTALE1;
+	PORTALE1_X=0;
+	PORTALE1_Y=1;
 	piano[9][19]=PORTALE2;
+	PORTALE2_X=9;
+	PORTALE2_Y=19;
 	
 	
-		for (var i=0; i<R; i++){
-		for (var j=0; j<C;j++){
-			disegnaCella(i,j);
-		}
-	}
-	
-	
+
 
 
 	
