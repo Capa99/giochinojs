@@ -59,7 +59,7 @@ for (var i=0; i<R; i++) {
 	}
 }
 
-function mostraMatriceHTML(){
+/*function mostraMatriceHTML(){
 	var s = "";
 
 	for (var i=0; i<R; i++) {
@@ -69,7 +69,7 @@ function mostraMatriceHTML(){
 		s = s + "<br>";
 	}
 	document.getElementById("messaggioDebug").innerHTML=s; 
-}
+}*/
 
 function disegnaPiano(){
 	for (var i=0; i<R; i++){
