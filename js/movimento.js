@@ -46,11 +46,13 @@ function controllaCella(x,y){
 			piano[x][y] = SFONDO;
 			countPillole--;
 			if (countPillole==0){
+			clearInterval(id);
             var audio7 = new Audio("Hallelujah Chorus Sound Effect.mp3");
             audio7.rewindAndPlay();
             document.getElementById("en").innerHTML="HAI VINTO!";
 			document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
 			document.getElementById("lvl").style.display="block";
+			document.getElementById("riprova").style.display="block";
             document.getElementById("energia").style.display="none";
             document.getElementById("centrosb").style.display="none";
             document.getElementById("myBar").style.display="none";
@@ -60,7 +62,7 @@ function controllaCella(x,y){
 			case FUNGO:
 				var audio2 = new Audio("Male Cough Sound Effect.mp3");
 				audio2.rewindAndPlay();
-				energia = energia - DELTA_ENERGIA;
+				energia = energia - DELTA_ENERGIA-10;
 				document.getElementById("energia").innerHTML=energia;
 				piano[x][y] = SFONDO;
 				if(energia<0)	

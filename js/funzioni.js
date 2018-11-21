@@ -25,13 +25,6 @@ this.y=y;
 this.nome=nome;
 }
 
-
-
-
-
-
-
-
 	Cacciatore.prototype.insegui = function () {
 	
 	if(Math.sqrt(Math.pow((ominoX-this.x),2)+Math.pow((ominoY-this.y),2))<5){	
@@ -83,7 +76,12 @@ this.nome=nome;
 				if (omino==ominoConSpada){
                var audio3 = new Audio("Demon Scream.mp3");
             audio3.rewindAndPlay();
-            clearInterval(intervallo);
+			document.getElementById("c"+this.x+"_"+this.y).src= pathImg+ominoConSpada + ".jpg"; 
+			if(ominoX==n1.x && ominoY==n1.y){
+            clearInterval(intervallo);}
+			else{
+			clearInterval(intervallo2);
+			}
             }
 				else{
                
@@ -94,6 +92,7 @@ this.nome=nome;
 	}
 	
 function gameOver(){
+clearInterval(id);
    var audio4 = new Audio("Evil Laugh.mp3");
 			audio4.rewindAndPlay();
 		document.getElementById("en").innerHTML="HAI PERSO!";
@@ -103,6 +102,7 @@ function gameOver(){
 	  document.getElementById("myBar").style.display="none";
 	  document.getElementById("energia").style.display="none";
 	  document.getElementById("btntouch").style.display="none";
+	  document.getElementById("riprova").style.display="block";
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
 function barraEnergia() {
@@ -115,7 +115,7 @@ function barraEnergia() {
 function barraClessidra() {
   var elem = document.getElementById("myBar");   
   var width = 100;
-  var id = setInterval(fram, 1000); // per una barra che avanza con il tempo
+   id = setInterval(fram, 1000); // per una barra che avanza con il tempo
   function fram() { // esempi di inner function 
 	if (width == 0) {
 	  clearInterval(id); // TEMPO SCADUTO, gestire l'evento (per esempio game over o vita)

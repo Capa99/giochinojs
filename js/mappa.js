@@ -27,9 +27,12 @@ var PORTALE2_Y=6;
 var PORTALE1_X=2;
 var PORTALE1_Y=3;
 
+
 var omino = "omino";
 var ominoConSpada = "ominoConSpada";
 var intervallo=null;
+var intervallo2=null;
+var id=null;
 
 var pathImg = "img1/";
 
@@ -75,6 +78,7 @@ function disegnaPiano(){
 	// disegna l'omino in una data posizione
 	disegnaCellaSpeciale(ominoX,ominoY,omino); 
 	document.getElementById("lvl").style.display="none";
+	document.getElementById("riprova").style.display="none";
 } 
 
 function generaPillola(){

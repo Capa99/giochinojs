@@ -13,6 +13,7 @@
    #btntouch {text-align: center;}
    #body {background-color:#3a8d0a;}
    #lvl {margin:0px auto; display:block;}
+   #riprova {margin:0px auto; display:block;}
    #myBar {width: 100%; height: 30px; position: absolute; background-color: #98c5c3;border: 2px solid blue;border-radius: 12px;}
 </style>
 <script type="text/javascript" src="js/mappa.js"></script>
@@ -252,11 +253,13 @@
 <img id="btnsx" src="sx.jpg"></img>
 <img id="btngiu" src="giu.jpg"></img> 
 <img id="btndx" src="dx.jpg"></img> <br>
-
 </p>
 
 <form action="livello2.html">
-<input type="submit" id="lvl" value="passa al secondo livello"/>
+<input type="submit" id="lvl" value="PASSA AL LIVELLO 2"/>
+</form>
+<br>
+<input type="button" id="riprova" value="Riprova" onClick="window.location='livello1.html'"/>
 
 <p id="posizioneOmino" align="center"></p>
 <p id="messaggioDebug" align="center"></p>

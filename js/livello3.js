@@ -63,6 +63,6 @@ function livello3(){
 	PORTALE2_X=5;
 	PORTALE2_Y=19;
 	n1 = new Cacciatore(5,14,8);
-	var intervallo=setInterval("n1.insegui()", 500);
+	intervallo=setInterval("n1.insegui()", 500);
 	piano[5][10]=ARMA;
 }
