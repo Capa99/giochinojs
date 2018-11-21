@@ -126,8 +126,8 @@ function barraClessidra() {
 	}
 	}
 	}
-window.addEventListener("load",livello2,true);
-window.addEventListener("load",disegnaPiano,true);
+
+
 window.addEventListener("load",barraClessidra,true);
 
 window.addEventListener("load",function(){
@@ -217,6 +217,7 @@ function livello1(){
 	piano[9][19]=PORTALE2;
 	PORTALE2_X=9;
 	PORTALE2_Y=19;
+	
 }
 
 function livello2(){
@@ -272,10 +273,10 @@ function livello2(){
 	piano[7][17]=PORTALE2;
 	PORTALE2_X=7;
 	PORTALE2_Y=17;
-   n1=new Cacciatore(4,18,NEMICO);
-    intervallo=setInterval("n1.insegui()",800);
-   piano[9][9]=ARMA;
-   
+	n1=new Cacciatore(4,18,NEMICO);
+	intervallo=setInterval("n1.insegui()",800);
+	piano[9][9]=ARMA;
+
 }
 function livello3(){
 	piano[0][4]=OSTACOLO;
@@ -380,25 +381,25 @@ function livello4(){
 	piano[0][10]=PILLOLA;
    piano[0][13]=PILLOLA;
 	piano[0][18]=PILLOLA;
-   piano[1][2]=PILLOLA;
+    piano[1][2]=PILLOLA;
 	piano[2][0]=PILLOLA;
-   piano[2][2]=PILLOLA;
+    piano[2][2]=PILLOLA;
 	piano[2][18]=PILLOLA;
-   piano[3][15]=PILLOLA;
+    piano[3][15]=PILLOLA;
 	piano[4][4]=PILLOLA;
-   piano[6][19]=PILLOLA;
+    piano[6][19]=PILLOLA;
 	piano[7][6]=PILLOLA;
-   piano[7][10]=PILLOLA;
+    piano[7][10]=PILLOLA;
 	piano[8][3]=PILLOLA;
-   piano[8][16]=PILLOLA;
+    piano[8][16]=PILLOLA;
 	piano[9][9]=PILLOLA;
 	countPillole=18;
 	pilloletot=18;
 	piano[5][0]=BUCONERO;
 	piano[8][10]=BUCONERO;
-   piano[8][11]=BUCONERO;
-   piano[8][12]=BUCONERO;
-   piano[8][19]=BUCONERO;
+    piano[8][11]=BUCONERO;
+    piano[8][12]=BUCONERO;
+    piano[8][19]=BUCONERO;
 	piano[0][1]=PORTALE1;
 	PORTALE1_X=0;
 	PORTALE1_Y=1;
