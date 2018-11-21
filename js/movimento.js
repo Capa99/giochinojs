@@ -53,6 +53,7 @@ function controllaCella(x,y){
             document.getElementById("energia").style.display="none";
             document.getElementById("centrosb").style.display="none";
             document.getElementById("myBar").style.display="none";
+			document.getElementById("btntouch").style.display="none";
 			}
 			return true;
 			case FUNGO:

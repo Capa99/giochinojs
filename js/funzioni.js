@@ -24,9 +24,10 @@ this.x=x;
 this.y=y;
 this.nome=nome;
 }
+function standard1(){
 	n1 = new Cacciatore(4,2,NEMICO);
 	var intervallo=setInterval("n1.insegui()", 800);
-	
+}
 
 
 
@@ -104,6 +105,7 @@ function gameOver(){
 	  document.getElementById("centrosb").style.display="none";
 	  document.getElementById("myBar").style.display="none";
 	  document.getElementById("energia").style.display="none";
+	  document.getElementById("btntouch").style.display="none";
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
 function barraEnergia() {
@@ -128,7 +130,6 @@ function barraClessidra() {
 	}
 	}
 window.addEventListener("load",disegnaPiano,true);
-window.addEventListener("load",generaSpada,true);
 window.addEventListener("load",barraClessidra,true);
 
 window.addEventListener("load",function(){
@@ -191,6 +192,30 @@ function livello1(){
 	piano[9][3]=OSTACOLO;
 	piano[9][13]=OSTACOLO;
 	piano[9][18]=OSTACOLO;
+	piano[2][4]=FUNGO;
+	piano[2][13]=FUNGO;
+	piano[3][1]=FUNGO;
+	piano[3][17]=FUNGO;
+	piano[3][19]=FUNGO;
+	piano[4][10]=FUNGO;
+	piano[5][8]=FUNGO;
+	piano[6][0]=FUNGO;
+	piano[6][6]=FUNGO;
+	piano[7][9]=FUNGO;
+	piano[7][12]=FUNGO;
+	piano[1][15]=PILLOLA;
+	piano[3][7]=PILLOLA;
+	piano[7][17]=PILLOLA;
+	piano[7][2]=PILLOLA;
+	piano[9][9]=PILLOLA;
+	countPillole=5;
+	pilloletot=5;
+	piano[4][14]=BUCONERO;
+	piano[8][2]=BUCONERO;
+	piano[9][8]=BUCONERO;
+	piano[0][1]=PORTALE1;
+	piano[9][19]=PORTALE2;
+	
 	
 		for (var i=0; i<R; i++){
 		for (var j=0; j<C;j++){
