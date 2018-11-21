@@ -60,7 +60,7 @@ function controllaCella(x,y){
 			}
 			return true;
 			case FUNGO:
-				var audio2 = new Audio("Male Cough Sound Effect.mp3");
+				var audio2 = new Audio("reverse mario power up sound effect.mp3");
 				audio2.rewindAndPlay();
 				energia = energia - DELTA_ENERGIA-10;
 				document.getElementById("energia").innerHTML=energia;
