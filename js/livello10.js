@@ -73,11 +73,11 @@ function livello10(){
 	PORTALE2_X=4;
 	PORTALE2_Y=12;
    
-   n1 = new Cacciatore(0,8,8);
+   n1 = new Cacciatore(0,8,RUNNER);
    intervallo = setInterval("n1.insegui()",500);
-   n2 = new Cacciatore(4,19,8);
+   n2 = new Cacciatore(4,19,RUNNER);
    intervallo2 = setInterval("n2.insegui()",500);
-   n3 = new Cacciatore(9,8,8);
+   n3 = new Cacciatore(9,8,RUNNER);
    intervallo3 = setInterval("n3.insegui()",500);
    
    piano[8][19]=PORTACHIUSA;

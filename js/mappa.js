@@ -20,6 +20,7 @@ var SFONDO = 0;
 var ARMA=2;
 var BUCONERO=6;
 var NEMICO=7;
+var RUNNER=8;
 var PORTALE1=5;
 var PORTALE2=9;
 var PORTALE2_X=6;
