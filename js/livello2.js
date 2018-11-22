@@ -8,6 +8,13 @@ function livello2(){
 	piano[2][16]=OSTACOLO;
 	piano[2][17]=OSTACOLO;
 	piano[2][18]=OSTACOLO;
+   
+   piano[3][1]=OSTACOLO;
+	piano[3][2]=OSTACOLO;
+	piano[3][3]=OSTACOLO;
+	piano[4][3]=OSTACOLO;
+   piano[5][3]=OSTACOLO;
+   
 	piano[3][6]=OSTACOLO;
 	piano[3][12]=OSTACOLO;
 	piano[4][5]=OSTACOLO;
@@ -56,6 +63,8 @@ function livello2(){
 	PORTALE2_Y=17;
 	n1=new Cacciatore(4,18,NEMICO);
 	intervallo=setInterval("n1.insegui()",800);
-	piano[9][9]=ARMA;
+	piano[5][1]=ARMA;
+   piano[3][0]=PORTACHIUSA;
+   piano[9][9]=CHIAVE;
 	
 }

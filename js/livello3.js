@@ -6,6 +6,8 @@ function livello3(){
 	piano[1][4]=OSTACOLO;
 	piano[2][4]=OSTACOLO;
 	piano[3][4]=OSTACOLO;
+   piano[3][5]=OSTACOLO;
+   piano[3][7]=OSTACOLO;
 	piano[6][4]=OSTACOLO;
 	piano[7][4]=OSTACOLO;
 	piano[8][4]=OSTACOLO;
@@ -44,11 +46,11 @@ function livello3(){
 	piano[0][18]=PILLOLA;
 	piano[9][6]=PILLOLA;
 	piano[9][10]=PILLOLA;
-	piano[9][14]=PILLOLA;
+	
 	piano[9][18]=PILLOLA;
-	countPillole=8;
-	pilloletot=8;
-	piano[3][6]=BUCONERO;
+	countPillole=7;
+	pilloletot=7;
+	
 	piano[3][10]=BUCONERO;
 	piano[3][14]=BUCONERO;
 	piano[3][18]=BUCONERO;
@@ -65,4 +67,6 @@ function livello3(){
 	n1 = new Cacciatore(5,14,8);
 	intervallo=setInterval("n1.insegui()", 500);
 	piano[5][10]=ARMA;
+   piano[3][6]=PORTACHIUSA;
+   piano[9][14]=CHIAVE;
 }

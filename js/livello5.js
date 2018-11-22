@@ -8,7 +8,6 @@ function livello5(){
 	piano[1][6]=OSTACOLO;
 	piano[2][3]=OSTACOLO;
 	piano[2][13]=OSTACOLO;
-	piano[3][1]=OSTACOLO;
    piano[4][8]=OSTACOLO;
    piano[4][9]=OSTACOLO;
 	piano[4][13]=OSTACOLO;
@@ -17,6 +16,7 @@ function livello5(){
    piano[5][7]=OSTACOLO;
    piano[5][9]=OSTACOLO;
 	piano[6][7]=OSTACOLO;
+   piano[6][9]=OSTACOLO;
 	piano[6][13]=OSTACOLO;
 	piano[6][15]=OSTACOLO;
 	piano[6][17]=OSTACOLO;
@@ -33,7 +33,6 @@ function livello5(){
 	piano[2][1]=FUNGO;
    piano[2][8]=FUNGO;
    piano[2][15]=FUNGO;
-   piano[3][3]=FUNGO;
    piano[3][6]=FUNGO;
 	piano[4][15]=FUNGO;
    piano[4][17]=FUNGO;
@@ -57,7 +56,6 @@ function livello5(){
    piano[4][0]=PILLOLA;
 	piano[4][16]=PILLOLA;
    piano[5][4]=PILLOLA;
-	piano[5][8]=PILLOLA;
    piano[5][14]=PILLOLA;
 	piano[5][17]=PILLOLA;
    piano[6][8]=PILLOLA;
@@ -68,11 +66,10 @@ function livello5(){
 	piano[8][9]=PILLOLA;
    piano[9][4]=PILLOLA;
 	piano[9][10]=PILLOLA;
-   piano[9][11]=PILLOLA;
 	piano[9][15]=PILLOLA;
    piano[9][19]=PILLOLA;
-	countPillole=29;
-	pilloletot=29;
+	countPillole=27;
+	pilloletot=27;
 	piano[0][11]=BUCONERO;
 	piano[0][15]=BUCONERO;
    piano[1][4]=BUCONERO;
@@ -80,6 +77,7 @@ function livello5(){
    piano[2][10]=BUCONERO;
    piano[2][17]=BUCONERO;
 	piano[3][11]=BUCONERO;
+   piano[4][11]=BUCONERO;
    piano[4][19]=BUCONERO;
    piano[5][11]=BUCONERO;
    piano[6][1]=BUCONERO;
@@ -100,5 +98,11 @@ function livello5(){
    intervallo = setInterval("n1.insegui()",500);
    n2 = new Cacciatore(3,18,8);
    intervallo2 = setInterval("n2.insegui()",500);
-   //piano[5][0]=ARMA;
+   piano[5][8]=ARMA;
+   piano[9][11]=PORTACHIUSA;
+   piano[9][19]=CHIAVE;
+   i1=setInterval("raggioLaser(3,2)", 1500);
+   piano[3][1]=LASERONEGIU;
+   piano[3][2]=LASER;
+   piano[3][3]=LASERONESU;
 }

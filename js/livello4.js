@@ -13,6 +13,7 @@ function livello4(){
 	piano[4][9]=OSTACOLO;
 	piano[4][13]=OSTACOLO;
 	piano[6][15]=OSTACOLO;
+   piano[7][9]=OSTACOLO;
 	piano[8][6]=OSTACOLO;
 	piano[9][11]=OSTACOLO;
 	piano[9][16]=OSTACOLO;
@@ -25,12 +26,10 @@ function livello4(){
 	piano[4][3]=FUNGO;
    piano[5][4]=FUNGO;
    piano[5][7]=FUNGO;
-   piano[6][10]=FUNGO;
-   piano[6][11]=FUNGO;
-	piano[6][12]=FUNGO;
    piano[6][18]=FUNGO;
    piano[7][2]=FUNGO;
    piano[7][3]=FUNGO;
+   piano[8][18]=FUNGO;
    piano[9][3]=FUNGO;
 	piano[0][2]=PILLOLA;
 	piano[0][6]=PILLOLA;
@@ -53,6 +52,9 @@ function livello4(){
 	countPillole=18;
 	pilloletot=18;
 	piano[5][0]=BUCONERO;
+   piano[6][10]=BUCONERO;
+   piano[6][11]=BUCONERO;
+	piano[6][12]=BUCONERO;
 	piano[8][10]=BUCONERO;
    piano[8][11]=BUCONERO;
    piano[8][12]=BUCONERO;
@@ -68,4 +70,11 @@ function livello4(){
    n2 = new Cacciatore(2,10,8);
    intervallo2 = setInterval("n2.insegui()",500);
    piano[7][11]=ARMA;
+   piano[7][12]=PORTACHIUSA;
+   piano[9][19]=CHIAVE;
+   i1=setInterval("raggioLaser(7,17)", 1500);
+   piano[6][17]=LASERONEGIU;
+   piano[7][17]=LASER;
+   piano[8][17]=LASERONESU;
+   
 }
