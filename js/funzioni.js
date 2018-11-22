@@ -75,6 +75,7 @@ Cacciatore.prototype.insegui = function () {
 				if (omino==ominoConSpada){
 					var audio3 = new Audio("Demon Scream.mp3");
 					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
 					document.getElementById("c"+this.x+"_"+this.y).src= pathImg+ominoConSpada + ".jpg"; 
 					if(ominoX==n1.x && ominoY==n1.y)
 						clearInterval(intervallo1);

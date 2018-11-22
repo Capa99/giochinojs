@@ -30,16 +30,19 @@ function controllaCella(x,y){
 		case ARMA:
 			var audio4 = new Audio("Sword Draw Sound Effect.mp3");
 			audio4.rewindAndPlay();
+         audio4.volume = 0.5;
 			omino = ominoConSpada;
 			piano[x][y] = SFONDO; 
 			return true; 	
 		case OSTACOLO: 
 			var audio = new Audio("Roblox Death Sound Effect.mp3");
 			audio.rewindAndPlay();
+         audio.volume = 0.5;
 			return false;         
          case CHIAVE:
          var audio45 = new Audio("Gun pick up sound effect 1.mp3");
 			audio45.rewindAndPlay();
+         audio45.volume = 0.5;
 			key = 1;
 			piano[x][y] = SFONDO;
 			return true;        
@@ -47,10 +50,12 @@ function controllaCella(x,y){
 			if(key==0){
         var audio40 = new Audio("Roblox Death Sound Effect.mp3");
 			audio40.rewindAndPlay();
+         audio40.volume = 0.5;
 			}
 			if (key == 1) {  
          var audio9 = new Audio("door_lock.mp3");
-			audio9.rewindAndPlay();     
+			audio9.rewindAndPlay();  
+         audio9.volume = 0.5;
 				piano[x][y] = PORTAAPERTA;
 				return true;
 			}
@@ -62,6 +67,7 @@ function controllaCella(x,y){
 		case PILLOLA:
 			var audio1 = new Audio("Magic Wand Sound Effect.mp3");
 			audio1.rewindAndPlay();
+         audio1.volume = 0.5;
 			energia = energia + DELTA_ENERGIA;
 			document.getElementById("energia").innerHTML=energia;
 			barraEnergia();
@@ -71,13 +77,14 @@ function controllaCella(x,y){
 			clearInterval(id);
             var audio7 = new Audio("Hallelujah Chorus Sound Effect.mp3");
             audio7.rewindAndPlay();
+            audio7.volume = 0.5;
             document.getElementById("en").innerHTML="HAI VINTO!";
 			document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
 			document.getElementById("lvl").style.display="block";
 			document.getElementById("riprova").style.display="block";
-            document.getElementById("energia").style.display="none";
-            document.getElementById("centrosb").style.display="none";
-            document.getElementById("myBar").style.display="none";
+         document.getElementById("energia").style.display="none";
+         document.getElementById("centrosb").style.display="none";
+         document.getElementById("myBar").style.display="none";
 			document.getElementById("btntouch").style.display="none";
 			document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
 			document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
@@ -88,6 +95,7 @@ function controllaCella(x,y){
 		case FUNGO:
 			var audio2 = new Audio("reverse mario power up sound effect.mp3");
 			audio2.rewindAndPlay();
+         audio2.volume = 0.5;
 			energia = energia - DELTA_ENERGIA-10;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = SFONDO;
@@ -97,6 +105,7 @@ function controllaCella(x,y){
 		case BUCONERO:
 			var audio5 = new Audio("Black Hole.mp3");
 			audio5.rewindAndPlay();
+         audio5.volume = 0.5;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = BUCONERO;
 			gameOver();
@@ -104,6 +113,7 @@ function controllaCella(x,y){
 		case PORTALE1: 
 			var audio6 = new Audio("Time Warp Sound Effect.mp3");
 			audio6.rewindAndPlay();
+         audio6.volume = 0.5;
 			disegnaCella(ominoX,ominoY);  // disegna lo sfondo nella posizione di Omino
 			ominoX = PORTALE2_X; 
 			ominoY = PORTALE2_Y;
@@ -112,6 +122,7 @@ function controllaCella(x,y){
 		case PORTALE2:
 			var audio6 = new Audio("Time Warp Sound Effect.mp3");
 			audio6.rewindAndPlay();
+         audio6.volume = 0.5;
 			disegnaCella(ominoX,ominoY);		
 			ominoX = PORTALE1_X; 
 			ominoY = PORTALE1_Y; 
@@ -120,10 +131,17 @@ function controllaCella(x,y){
 		case LASER:
       var audio60 = new Audio("Laser Sound FX 1.mp3");
 			audio60.rewindAndPlay();
+         audio60.volume = 0.5;
 			gameOver();
 		case LASERONEGIU:
+      var audio454 = new Audio("Roblox Death Sound Effect.mp3");
+			audio454.rewindAndPlay();
+         audio454.volume = 0.5;
 			return false;
 		case LASERONESU:
+      var audio666 = new Audio("Roblox Death Sound Effect.mp3");
+			audio666.rewindAndPlay();
+         audio666.volume = 0.5;
 			return false;
 		default: 
 	      return true; 			
