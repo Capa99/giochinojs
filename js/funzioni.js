@@ -35,7 +35,7 @@ Cacciatore.prototype.insegui = function () {
 		if (this.y < ominoY) {newY = this.y +1;}
 		if (this.y > ominoY) {newY = this.y - 1;}		
 		// adesso prima di spostare controlliamo che non ci sia un ostacolo nella cella: 
-		if (piano[newX][newY]!=OSTACOLO){
+		if (piano[newX][newY]!=OSTACOLO || piano[newX][newY]!=PORTACHIUSA){
 		// assume la nuova posizione
 			this.x = newX; 
 			this.y = newY;
@@ -64,7 +64,7 @@ Cacciatore.prototype.insegui = function () {
 		if (random==4)
 			if(newY<C-1)
 			newY=(newY +1 + C)%C;		
-		if (piano[newX][newY]!=OSTACOLO){
+		if (piano[newX][newY]!=OSTACOLO || piano[newX][newY]!=PORTACHIUSA){
 			this.x= newX;
 			this.y= newY;		
 			document.getElementById("c"+precX+"_"+precY).src=pathImg+piano[precX][precY] + ".jpg";
