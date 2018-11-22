@@ -113,7 +113,7 @@ function controllaCella(x,y){
 			ominoY = PORTALE1_Y; 
 			disegnaOmino();
 			return false; 
-		case 10:
+		case LASER:
 		gameOver();
 		default: 
 	      return true; 
