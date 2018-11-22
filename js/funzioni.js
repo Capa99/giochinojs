@@ -178,8 +178,11 @@ function dettagliOggetti(){
 	document.getElementById("PORTALE").onclick = function() {alert("se si entra nel portale si esce dall'altro portale, i due portali sono collegati")};
 	document.getElementById("BUCONERO").onclick = function() {alert("se si entra in un buconero si muore")};
 	document.getElementById("NEMICO1").onclick = function() {alert("il nemico cammina a caso e quando ti avvicini ti rincorre")};
-	document.getElementById("NEMICO2").onclick = function() {alert("il nemico runner fa le stesse cose del nemico ma più velocemente")};
+	document.getElementById("NEMICO2").onclick = function() {alert("il nemico runner fa le stesse cose del nemico ma piu' velocemente")};
 	document.getElementById("OMINO").onclick = function() {alert("l'omino e' il protagonista del gioco")};
 	document.getElementById("OMINOCONSPADA").onclick = function() {alert("l'omino con la spada potra' eliminare i nemici")};
+	document.getElementById("PORTA").onclick = function() {alert("la porta rimane chiusa se non hai la chiave, si apre se raccogli la chiave e ti avvicini alla porta chiusa")};
+	document.getElementById("CHIAVE").onclick = function() {alert("apre la porta")};
+	document.getElementById("LASER").onclick = function() {alert("ogni 2 secondi il laser si aziona, se si passa sopra si muore")};
 
 }

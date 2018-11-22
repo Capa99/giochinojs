@@ -28,35 +28,31 @@ function checkKeyPress (event){
 function controllaCella(x,y){
 	switch (piano[x][y]){
 		case ARMA:
-      var audio4 = new Audio("Sword Draw Sound Effect.mp3");
+			var audio4 = new Audio("Sword Draw Sound Effect.mp3");
 			audio4.rewindAndPlay();
 			omino = ominoConSpada;
 			piano[x][y] = SFONDO; 
 			return true; 	
 		case OSTACOLO: 
-      var audio = new Audio("Roblox Death Sound Effect.mp3");
+			var audio = new Audio("Roblox Death Sound Effect.mp3");
 			audio.rewindAndPlay();
-			return false;
-         
+			return false;         
          case CHIAVE:
-         key = 1;
-         piano[x][y] = SFONDO;
-			return true;
-         
-         case PORTACHIUSA: 
-         if (key == 1) {
-            
-            piano[x][y] = PORTAAPERTA;
-            return true;
-         } else 
-			return false;
-         
+			key = 1;
+			piano[x][y] = SFONDO;
+			return true;        
+        case PORTACHIUSA: 
+			if (key == 1) {           
+				piano[x][y] = PORTAAPERTA;
+				return true;
+			}
+			else 
+				return false;        
          case PORTAAPERTA:
          piano[x][y] = PORTAAPERTA;
-         return true;
-         
+         return true;        
 		case PILLOLA:
-      var audio1 = new Audio("Magic Wand Sound Effect.mp3");
+			var audio1 = new Audio("Magic Wand Sound Effect.mp3");
 			audio1.rewindAndPlay();
 			energia = energia + DELTA_ENERGIA;
 			document.getElementById("energia").innerHTML=energia;
@@ -81,44 +77,47 @@ function controllaCella(x,y){
 			document.getElementById("det").style.display="none";
 			}
 			return true;
-			case FUNGO:
-				var audio2 = new Audio("reverse mario power up sound effect.mp3");
-				audio2.rewindAndPlay();
-				energia = energia - DELTA_ENERGIA-10;
-				document.getElementById("energia").innerHTML=energia;
-				piano[x][y] = SFONDO;
-				if(energia<0)	
-					gameOver();
+		case FUNGO:
+			var audio2 = new Audio("reverse mario power up sound effect.mp3");
+			audio2.rewindAndPlay();
+			energia = energia - DELTA_ENERGIA-10;
+			document.getElementById("energia").innerHTML=energia;
+			piano[x][y] = SFONDO;
+			if(energia<0)	
+				gameOver();
 			return true;
 		case BUCONERO:
-      var audio5 = new Audio("Black Hole.mp3");
-          audio5.rewindAndPlay();
+			var audio5 = new Audio("Black Hole.mp3");
+			audio5.rewindAndPlay();
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = BUCONERO;
 			gameOver();
 			return true;
 		case PORTALE1: 
-      var audio6 = new Audio("Time Warp Sound Effect.mp3");
-          audio6.rewindAndPlay();
+			var audio6 = new Audio("Time Warp Sound Effect.mp3");
+			audio6.rewindAndPlay();
 			disegnaCella(ominoX,ominoY);  // disegna lo sfondo nella posizione di Omino
 			ominoX = PORTALE2_X; 
 			ominoY = PORTALE2_Y;
 			disegnaOmino();
 			return false;  
 		case PORTALE2:
-      var audio6 = new Audio("Time Warp Sound Effect.mp3");
-          audio6.rewindAndPlay();
+			var audio6 = new Audio("Time Warp Sound Effect.mp3");
+			audio6.rewindAndPlay();
 			disegnaCella(ominoX,ominoY);		
 			ominoX = PORTALE1_X; 
 			ominoY = PORTALE1_Y; 
 			disegnaOmino();
 			return false; 
 		case LASER:
-		gameOver();
+			gameOver();
+		case LASERONEGIU:
+			return false;
+		case LASERONESU:
+			return false;
 		default: 
-	      return true; 
+	      return true; 			
 	}
-
 	return true; 
 }
 
