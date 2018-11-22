@@ -37,6 +37,24 @@ function controllaCella(x,y){
       var audio = new Audio("Roblox Death Sound Effect.mp3");
 			audio.rewindAndPlay();
 			return false;
+         
+         case CHIAVE:
+         key = 1;
+         piano[x][y] = SFONDO;
+			return true;
+         
+         case PORTACHIUSA: 
+         if (key == 1) {
+            
+            piano[x][y] = PORTAAPERTA;
+            return true;
+         } else 
+			return false;
+         
+         case PORTAAPERTA:
+         piano[x][y] = PORTAAPERTA;
+         return true;
+         
 		case PILLOLA:
       var audio1 = new Audio("Magic Wand Sound Effect.mp3");
 			audio1.rewindAndPlay();

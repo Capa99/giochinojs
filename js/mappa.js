@@ -26,6 +26,10 @@ var PORTALE2_X=6;
 var PORTALE2_Y=6;
 var PORTALE1_X=2;
 var PORTALE1_Y=3;
+var CHIAVE = 11;
+var key = 0;
+var PORTACHIUSA = 12;
+var PORTAAPERTA = 13;
 
 
 var omino = "omino";
