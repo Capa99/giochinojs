@@ -35,7 +35,7 @@ Cacciatore.prototype.insegui = function () {
 		if (this.y < ominoY) {newY = this.y +1;}
 		if (this.y > ominoY) {newY = this.y - 1;}		
 		// adesso prima di spostare controlliamo che non ci sia un ostacolo nella cella: 
-		if (piano[newX][newY]!=OSTACOLO || piano[newX][newY]!=PORTACHIUSA){
+		if (piano[newX][newY]!=OSTACOLO && piano[newX][newY]!=PORTACHIUSA && piano[newX][newY]!=LASERONESU && piano[newX][newY]!=LASERONEGIU ){
 		// assume la nuova posizione
 			this.x = newX; 
 			this.y = newY;
@@ -64,7 +64,7 @@ Cacciatore.prototype.insegui = function () {
 		if (random==4)
 			if(newY<C-1)
 			newY=(newY +1 + C)%C;		
-		if (piano[newX][newY]!=OSTACOLO || piano[newX][newY]!=PORTACHIUSA){
+		if (piano[newX][newY]!=OSTACOLO && piano[newX][newY]!=PORTACHIUSA && piano[newX][newY]!=LASERONESU && piano[newX][newY]!=LASERONEGIU){
 			this.x= newX;
 			this.y= newY;		
 			document.getElementById("c"+precX+"_"+precY).src=pathImg+piano[precX][precY] + ".jpg";
@@ -76,12 +76,18 @@ Cacciatore.prototype.insegui = function () {
 					var audio3 = new Audio("Demon Scream.mp3");
 					audio3.rewindAndPlay();
 					document.getElementById("c"+this.x+"_"+this.y).src= pathImg+ominoConSpada + ".jpg"; 
-					if(ominoX==n1.x && ominoY==n1.y){
-						clearInterval(intervallo);
-					}
-					else{
+					if(ominoX==n1.x && ominoY==n1.y)
+						clearInterval(intervallo1);
+					if(ominoX==n2.x && ominoY==n2.y)
 						clearInterval(intervallo2);
-					}
+					if(ominoX==n3.x && ominoY==n3.y)
+						clearInterval(intervallo3);
+					if(ominoX==n4.x && ominoY==n4.y)
+						clearInterval(intervallo4);
+					if(ominoX==n5.x && ominoY==n5.y)
+						clearInterval(intervallo5);	
+					if(ominoX==n6.x && ominoY==n6.y)
+						clearInterval(intervallo6);							
 				}	
 				else{
 					gameOver();
@@ -91,8 +97,12 @@ Cacciatore.prototype.insegui = function () {
 	
 function gameOver(){
 	clearInterval(id);
-    clearInterval(intervallo);
+    clearInterval(intervallo1);
 	clearInterval(intervallo2);
+	clearInterval(intervallo3);
+	clearInterval(intervallo4);
+	clearInterval(intervallo5);
+	clearInterval(intervallo6);
 	var audio4 = new Audio("Evil Laugh.mp3");
 	audio4.rewindAndPlay();
 	document.getElementById("en").innerHTML="HAI PERSO!";

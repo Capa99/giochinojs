@@ -66,7 +66,7 @@ function livello4(){
 	PORTALE2_X=7;
 	PORTALE2_Y=19;
    n1 = new Cacciatore(9,0,NEMICO);
-   intervallo = setInterval("n1.insegui()",800);
+   intervallo1 = setInterval("n1.insegui()",800);
    n2 = new Cacciatore(2,10,8);
    intervallo2 = setInterval("n2.insegui()",500);
    piano[7][11]=ARMA;
