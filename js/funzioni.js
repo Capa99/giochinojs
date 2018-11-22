@@ -106,6 +106,7 @@ function gameOver(){
     document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
 	document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
 	document.getElementById("dettagli").style.display="none";
+	document.getElementById("det").style.display="none";
 	
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
@@ -148,24 +149,37 @@ window.addEventListener("load",function(){
 	document.getElementById("gostacolo").addEventListener("click",generaOstacolo,false); */	
 	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
 	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
-	document.getElementById("OSTACOLO").addEventListener("mouseover",dettagliOggetti,true);
+	document.getElementById("dettagli").addEventListener("mouseover",dettagliOggetti,false);
 });
 
 Audio.prototype.rewindAndPlay = function() { 
+	this.pause();
 	this.pause();
 	this.currentTime = 0.0; 
 	this.play();
 }
 
-function dettagliOggetti(){
-	document.getElementById("OSTACOLO").onmouseover = function() {alert("l'ostacolo blocca il passaggio")};
-	document.getElementById("PILLOLA").onmouseover = function() {alert("per completare il livello hai bisogno di raccogliere tutte le pillole, il punteggio aumenta sempre di 10 ogni volta che si raccoglie una pillola")};
-	document.getElementById("SPADA").onmouseover = function() {alert("se l'omino raccoglie la spada puo' eliminare i nemici che si trovano nel livello")};
-	document.getElementById("FUNGO").onmouseover = function() {alert("se si passa sopra un fungo il punteggio diminuisce di 20 e se il punteggio va sotto lo 0 muori")};
-	document.getElementById("PORTALE").onmouseover = function() {alert("se si entra nel portale si esce dall'altro portale, i due portali sono collegati")};
-	document.getElementById("BUCONERO").onmouseover = function() {alert("se si entra in un buconero si muore")};
-	document.getElementById("NEMICO1").onmouseover = function() {alert("il nemico cammina a caso e quando ti avvicini ti rincorre")};
-	document.getElementById("NEMICO2").onmouseover = function() {alert("il nemico runner fa le stesse cose del nemico ma più velocemente")};
-	document.getElementById("OMINO").onmouseover = function() {alert("l'omino e' il protagonista del gioco")};
-	document.getElementById("OMINOCONSPADA").onmouseover = function() {alert("l'omino con la spada potra' eliminare i nemici")};
+function raggioLaser(x,y){
+	if (ominoX==x && ominoY==y)
+		gameOver();
+	if (statolaser==10)
+		statolaser=0;
+	else
+		statolaser=10;
+	piano[x][y]=statolaser;
+	disegnaCellaSpeciale(x,y,statolaser);
+	// per creare un raggio ad intermittenza: i1=setInterval("raggioLaser(x,y)", 1500);
+}
+function dettagliOggetti(){	
+	document.getElementById("OSTACOLO").onclick = function() {alert("l'ostacolo blocca il passaggio")};
+	document.getElementById("PILLOLA").onclick = function() {alert("per completare il livello hai bisogno di raccogliere tutte le pillole, il punteggio aumenta sempre di 10 ogni volta che si raccoglie una pillola")};
+	document.getElementById("SPADA").onclick = function() {alert("se l'omino raccoglie la spada puo' eliminare i nemici che si trovano nel livello")};
+	document.getElementById("FUNGO").onclick = function() {alert("se si passa sopra un fungo il punteggio diminuisce di 20 e se il punteggio va sotto lo 0 muori")};
+	document.getElementById("PORTALE").onclick = function() {alert("se si entra nel portale si esce dall'altro portale, i due portali sono collegati")};
+	document.getElementById("BUCONERO").onclick = function() {alert("se si entra in un buconero si muore")};
+	document.getElementById("NEMICO1").onclick = function() {alert("il nemico cammina a caso e quando ti avvicini ti rincorre")};
+	document.getElementById("NEMICO2").onclick = function() {alert("il nemico runner fa le stesse cose del nemico ma più velocemente")};
+	document.getElementById("OMINO").onclick = function() {alert("l'omino e' il protagonista del gioco")};
+	document.getElementById("OMINOCONSPADA").onclick = function() {alert("l'omino con la spada potra' eliminare i nemici")};
+
 }
