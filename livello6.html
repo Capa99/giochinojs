@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   #centro {text-align: center;}
+   #logo {width: 300px; height: 200px;}
+   #en {text-align: center; font-family: jokerman; color: #c0d031; font-size: 50px;}
+   #centrosb {text-align: center; border: #3a8d0a; border-style: solid; border-width: 10px; height: fit-content; width: 680px; margin-left: auto; margin-right: auto;}
+   #sfondoBarra {width: 680px; height: 30px; position: absolute; background-color: #ddd; border: 2px solid green; border-radius: 12px;}
+   #barraCompletamento {width: 0px; background-color: #4CAF50; height: 30px; position: relative; border: 2px solid green; border-radius: 12px;}
+   #gioco {text-align: center; border: #56340a; border-style: solid; border-width: 10px; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto;}
+   #energia {text-align: center; font-family: jokerman; color: #c0d031; font-size: 50px;}
+   #btntouch {text-align: center; display:inline-table;}
+   #body {background-color:#3a8d0a;}
+   #lvl {margin:0px auto; display:block;}
+   #riprova {margin:0px auto; display:block;}
+   #myBar {width: 100%; height: 30px; position: absolute; background-color: #98c5c3;border: 2px solid blue;border-radius: 12px;}
+   ul{float: left;list-style-type: none; margin: 0;padding: 0;width: 90px;background-color: #f1f1f1;}
+   li a {display: block;color: #000;padding: 8px 16px; text-decoration: none;}
+   li a:hover {background-color: #3a8d0a; color: white;}
+   #det{font-family: jokerman; color: #c0d031; font-size: 50px;}
+</style>
+<script type="text/javascript" src="js/mappa.js"></script>
+<script type="text/javascript" src="js/movimento.js"></script>
+<script type="text/javascript" src="js/funzioni.js"></script>
+<script type="text/javascript" src="js/livello6.js"></script>
+</head>
+<body id="body">
+	<p id="centro">
+		<img id="logo" alt="gif" src="gioco.gif">
+	</p>
+	<div id="centrosb">
+		<p id="sfondoBarra"></p>
+		<p id="barraCompletamento"></p>
+	</div>
+	<p id="myBar"></p>
+	<br> <br> <br>
+	<h1 id="en">PUNTI: </h1>
+	<p id="energia">0</p>	
+	<a id="det">DETTAGLI</a><br>
+	<ul id="dettagli">	
+		<li><a><img id="OSTACOLO" src="img1/3.jpg"/></a></li>
+		<li><a><img id="SPADA" src="img1/2.jpg"/></a></li>
+		<li><a><img id="PILLOLA" src="img1/1.jpg"/></a></li>
+		<li><a><img id="FUNGO" src="img1/4.jpg"/></a></li>
+		<li><a><img id="BUCONERO" src="img1/6.jpg"/></a></li>
+		<li><a><img id="PORTALE" src="img1/5.jpg"/></a></li>
+		<li><a><img id="NEMICO1" src="img1/7.jpg"/></a></li>
+		<li><a><img id="NEMICO2" src="img1/8.jpg"/></a></li>
+		<li><a><img id="OMINO" src="img1/omino.jpg"/></a></li>
+		<li><a><img id="OMINOCONSPADA" src="img1/ominoConSpada.jpg"/></a></li>
+		<li><a><img id="PORTA" src="img1/12.jpg"/></a></li>
+		<li><a><img id="CHIAVE" src="img1/11.jpg"/></a></li>
+		<li><a><img id="LASER" src="img1/15.jpg"/></a></li>
+	</ul>
+	<p id="gioco">
+		<img id="c0_0" src="img1/0.jpg">
+		<img id="c0_1" src="img1/0.jpg">
+		<img id="c0_2" src="img1/0.jpg">
+		<img id="c0_3" src="img1/0.jpg">
+		<img id="c0_4" src="img1/0.jpg">
+		<img id="c0_5" src="img1/0.jpg">
+		<img id="c0_6" src="img1/0.jpg">
+		<img id="c0_7" src="img1/0.jpg">
+		<img id="c0_8" src="img1/0.jpg">
+		<img id="c0_9" src="img1/0.jpg">
+		<img id="c0_10" src="img1/0.jpg">
+		<img id="c0_11" src="img1/0.jpg">
+		<img id="c0_12" src="img1/0.jpg">
+		<img id="c0_13" src="img1/0.jpg">
+		<img id="c0_14" src="img1/0.jpg">
+		<img id="c0_15" src="img1/0.jpg">
+		<img id="c0_16" src="img1/0.jpg">
+		<img id="c0_17" src="img1/0.jpg">
+		<img id="c0_18" src="img1/0.jpg">
+		<img id="c0_19" src="img1/0.jpg">
+		<br>
+		<img id="c1_0" src="img1/0.jpg">
+		<img id="c1_1" src="img1/0.jpg">
+		<img id="c1_2" src="img1/0.jpg">
+		<img id="c1_3" src="img1/0.jpg">
+		<img id="c1_4" src="img1/0.jpg">
+		<img id="c1_5" src="img1/0.jpg">
+		<img id="c1_6" src="img1/0.jpg">
+		<img id="c1_7" src="img1/0.jpg">
+		<img id="c1_8" src="img1/0.jpg">
+		<img id="c1_9" src="img1/0.jpg">
+		<img id="c1_10" src="img1/0.jpg">
+		<img id="c1_11" src="img1/0.jpg">
+		<img id="c1_12" src="img1/0.jpg">
+		<img id="c1_13" src="img1/0.jpg">
+		<img id="c1_14" src="img1/0.jpg">
+		<img id="c1_15" src="img1/0.jpg">
+		<img id="c1_16" src="img1/0.jpg">
+		<img id="c1_17" src="img1/0.jpg">
+		<img id="c1_18" src="img1/0.jpg">
+		<img id="c1_19" src="img1/0.jpg">
+		<br>
+		<img id="c2_0" src="img1/0.jpg">
+		<img id="c2_1" src="img1/0.jpg">
+		<img id="c2_2" src="img1/0.jpg">
+		<img id="c2_3" src="img1/0.jpg">
+		<img id="c2_4" src="img1/0.jpg">
+		<img id="c2_5" src="img1/0.jpg">
+		<img id="c2_6" src="img1/0.jpg">
+		<img id="c2_7" src="img1/0.jpg">
+		<img id="c2_8" src="img1/0.jpg">
+		<img id="c2_9" src="img1/0.jpg">
+		<img id="c2_10" src="img1/0.jpg">
+		<img id="c2_11" src="img1/0.jpg">
+		<img id="c2_12" src="img1/0.jpg">
+		<img id="c2_13" src="img1/0.jpg">
+		<img id="c2_14" src="img1/0.jpg">
+		<img id="c2_15" src="img1/0.jpg">
+		<img id="c2_16" src="img1/0.jpg">
+		<img id="c2_17" src="img1/0.jpg">
+		<img id="c2_18" src="img1/0.jpg">
+		<img id="c2_19" src="img1/0.jpg">
+		<br>
+		<img id="c3_0" src="img1/0.jpg">
+		<img id="c3_1" src="img1/0.jpg">
+		<img id="c3_2" src="img1/0.jpg">
+		<img id="c3_3" src="img1/0.jpg">
+		<img id="c3_4" src="img1/0.jpg">
+		<img id="c3_5" src="img1/0.jpg">
+		<img id="c3_6" src="img1/0.jpg">
+		<img id="c3_7" src="img1/0.jpg">
+		<img id="c3_8" src="img1/0.jpg">
+		<img id="c3_9" src="img1/0.jpg">
+		<img id="c3_10" src="img1/0.jpg">
+		<img id="c3_11" src="img1/0.jpg">
+		<img id="c3_12" src="img1/0.jpg">
+		<img id="c3_13" src="img1/0.jpg">
+		<img id="c3_14" src="img1/0.jpg">
+		<img id="c3_15" src="img1/0.jpg">
+		<img id="c3_16" src="img1/0.jpg">
+		<img id="c3_17" src="img1/0.jpg">
+		<img id="c3_18" src="img1/0.jpg">
+		<img id="c3_19" src="img1/0.jpg">
+		<br>
+		<img id="c4_0" src="img1/0.jpg">
+		<img id="c4_1" src="img1/0.jpg">
+		<img id="c4_2" src="img1/0.jpg">
+		<img id="c4_3" src="img1/0.jpg">
+		<img id="c4_4" src="img1/0.jpg">
+		<img id="c4_5" src="img1/0.jpg">
+		<img id="c4_6" src="img1/0.jpg">
+		<img id="c4_7" src="img1/0.jpg">
+		<img id="c4_8" src="img1/0.jpg">
+		<img id="c4_9" src="img1/0.jpg">
+		<img id="c4_10" src="img1/0.jpg">
+		<img id="c4_11" src="img1/0.jpg">
+		<img id="c4_12" src="img1/0.jpg">
+		<img id="c4_13" src="img1/0.jpg">
+		<img id="c4_14" src="img1/0.jpg">
+		<img id="c4_15" src="img1/0.jpg">
+		<img id="c4_16" src="img1/0.jpg">
+		<img id="c4_17" src="img1/0.jpg">
+		<img id="c4_18" src="img1/0.jpg">
+		<img id="c4_19" src="img1/0.jpg">
+		<br>
+		<img id="c5_0" src="img1/0.jpg">
+		<img id="c5_1" src="img1/0.jpg">
+		<img id="c5_2" src="img1/0.jpg">
+		<img id="c5_3" src="img1/0.jpg">
+		<img id="c5_4" src="img1/0.jpg">
+		<img id="c5_5" src="img1/0.jpg">
+		<img id="c5_6" src="img1/0.jpg">
+		<img id="c5_7" src="img1/0.jpg">
+		<img id="c5_8" src="img1/0.jpg">
+		<img id="c5_9" src="img1/0.jpg">
+		<img id="c5_10" src="img1/0.jpg">
+		<img id="c5_11" src="img1/0.jpg">
+		<img id="c5_12" src="img1/0.jpg">
+		<img id="c5_13" src="img1/0.jpg">
+		<img id="c5_14" src="img1/0.jpg">
+		<img id="c5_15" src="img1/0.jpg">
+		<img id="c5_16" src="img1/0.jpg">
+		<img id="c5_17" src="img1/0.jpg">
+		<img id="c5_18" src="img1/0.jpg">
+		<img id="c5_19" src="img1/0.jpg">
+		<br>
+		<img id="c6_0" src="img1/0.jpg">
+		<img id="c6_1" src="img1/0.jpg">
+		<img id="c6_2" src="img1/0.jpg">
+		<img id="c6_3" src="img1/0.jpg">
+		<img id="c6_4" src="img1/0.jpg">
+		<img id="c6_5" src="img1/0.jpg">
+		<img id="c6_6" src="img1/0.jpg">
+		<img id="c6_7" src="img1/0.jpg">
+		<img id="c6_8" src="img1/0.jpg">
+		<img id="c6_9" src="img1/0.jpg">
+		<img id="c6_10" src="img1/0.jpg">
+		<img id="c6_11" src="img1/0.jpg">
+		<img id="c6_12" src="img1/0.jpg">
+		<img id="c6_13" src="img1/0.jpg">
+		<img id="c6_14" src="img1/0.jpg">
+		<img id="c6_15" src="img1/0.jpg">
+		<img id="c6_16" src="img1/0.jpg">
+		<img id="c6_17" src="img1/0.jpg">
+		<img id="c6_18" src="img1/0.jpg">
+		<img id="c6_19" src="img1/0.jpg">
+		<br>
+		<img id="c7_0" src="img1/0.jpg">
+		<img id="c7_1" src="img1/0.jpg">
+		<img id="c7_2" src="img1/0.jpg">
+		<img id="c7_3" src="img1/0.jpg">
+		<img id="c7_4" src="img1/0.jpg">
+		<img id="c7_5" src="img1/0.jpg">
+		<img id="c7_6" src="img1/0.jpg">
+		<img id="c7_7" src="img1/0.jpg">
+		<img id="c7_8" src="img1/0.jpg">
+		<img id="c7_9" src="img1/0.jpg">
+		<img id="c7_10" src="img1/0.jpg">
+		<img id="c7_11" src="img1/0.jpg">
+		<img id="c7_12" src="img1/0.jpg">
+		<img id="c7_13" src="img1/0.jpg">
+		<img id="c7_14" src="img1/0.jpg">
+		<img id="c7_15" src="img1/0.jpg">
+		<img id="c7_16" src="img1/0.jpg">
+		<img id="c7_17" src="img1/0.jpg">
+		<img id="c7_18" src="img1/0.jpg">
+		<img id="c7_19" src="img1/0.jpg">
+		<br>
+		<img id="c8_0" src="img1/0.jpg">
+		<img id="c8_1" src="img1/0.jpg">
+		<img id="c8_2" src="img1/0.jpg">
+		<img id="c8_3" src="img1/0.jpg">
+		<img id="c8_4" src="img1/0.jpg">
+		<img id="c8_5" src="img1/0.jpg">
+		<img id="c8_6" src="img1/0.jpg">
+		<img id="c8_7" src="img1/0.jpg">
+		<img id="c8_8" src="img1/0.jpg">
+		<img id="c8_9" src="img1/0.jpg">
+		<img id="c8_10" src="img1/0.jpg">
+		<img id="c8_11" src="img1/0.jpg">
+		<img id="c8_12" src="img1/0.jpg">
+		<img id="c8_13" src="img1/0.jpg">
+		<img id="c8_14" src="img1/0.jpg">
+		<img id="c8_15" src="img1/0.jpg">
+		<img id="c8_16" src="img1/0.jpg">
+		<img id="c8_17" src="img1/0.jpg">
+		<img id="c8_18" src="img1/0.jpg">
+		<img id="c8_19" src="img1/0.jpg">
+		<br>
+		<img id="c9_0" src="img1/0.jpg">
+		<img id="c9_1" src="img1/0.jpg">
+		<img id="c9_2" src="img1/0.jpg">
+		<img id="c9_3" src="img1/0.jpg">
+		<img id="c9_4" src="img1/0.jpg">
+		<img id="c9_5" src="img1/0.jpg">
+		<img id="c9_6" src="img1/0.jpg">
+		<img id="c9_7" src="img1/0.jpg">
+		<img id="c9_8" src="img1/0.jpg">
+		<img id="c9_9" src="img1/0.jpg">
+		<img id="c9_10" src="img1/0.jpg">
+		<img id="c9_11" src="img1/0.jpg">
+		<img id="c9_12" src="img1/0.jpg">
+		<img id="c9_13" src="img1/0.jpg">
+		<img id="c9_14" src="img1/0.jpg">
+		<img id="c9_15" src="img1/0.jpg">
+		<img id="c9_16" src="img1/0.jpg">
+		<img id="c9_17" src="img1/0.jpg">
+		<img id="c9_18" src="img1/0.jpg">
+		<img id="c9_19" src="img1/0.jpg">
+		<br>
+	</p>
+<p id="btntouch">
+
+<img id="btnsu" src="su.jpg"></img> <br>
+<img id="btnsx" src="sx.jpg"></img>
+<img id="btngiu" src="giu.jpg"></img> 
+<img id="btndx" src="dx.jpg"></img> <br>
+</p>
+
+<form action="livello7.html">
+<input type="submit" id="lvl" value="PASSA AL LIVELLO 7"/>
+</form>
+<br>
+<input type="button" id="riprova" value="Riprova" onClick="window.location='livello6.html'"/>
+
+</body>
+</html>
