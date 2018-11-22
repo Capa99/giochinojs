@@ -37,9 +37,9 @@ function livello8(){
    intervallo1 = setInterval("n1.insegui()",800);
    n2 = new Cacciatore(0,13,NEMICO);
    intervallo2 = setInterval("n2.insegui()",800);
-   n3 = new Cacciatore(2,2,NEMICO);
+   n3 = new Cacciatore(2,4,NEMICO);
    intervallo3 = setInterval("n3.insegui()",800);
-   n4 = new Cacciatore(6,2,NEMICO);
+   n4 = new Cacciatore(6,4,NEMICO);
    intervallo4 = setInterval("n4.insegui()",800);
    n5 = new Cacciatore(9,6,NEMICO);
    intervallo5 = setInterval("n5.insegui()",800);

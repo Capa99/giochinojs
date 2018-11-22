@@ -36,8 +36,12 @@ var LASERONESU=15;
 
 var omino = "omino";
 var ominoConSpada = "ominoConSpada";
-var intervallo=null;
+var intervallo1=null;
 var intervallo2=null;
+var intervallo3=null;
+var intervallo4=null;
+var intervallo5=null;
+var intervallo6=null;
 var id=null;
 var down=null;
 var press=null;
