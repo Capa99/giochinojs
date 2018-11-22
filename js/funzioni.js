@@ -153,6 +153,7 @@ window.addEventListener("load",function(){
 
 Audio.prototype.rewindAndPlay = function() { 
 	this.pause();
+	this.pause();
 	this.currentTime = 0.0; 
 	this.play();
 }
