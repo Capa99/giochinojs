@@ -59,6 +59,7 @@ function controllaCella(x,y){
 			document.getElementById("btntouch").style.display="none";
 			document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
 			document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
+			document.getElementById("dettagli").style.display="none";
 			}
 			return true;
 			case FUNGO:
