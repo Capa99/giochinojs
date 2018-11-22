@@ -67,9 +67,8 @@ function livello5(){
    piano[9][4]=PILLOLA;
 	piano[9][10]=PILLOLA;
 	piano[9][15]=PILLOLA;
-   piano[9][19]=PILLOLA;
-	countPillole=27;
-	pilloletot=27;
+	countPillole=26;
+	pilloletot=26;
 	piano[0][11]=BUCONERO;
 	piano[0][15]=BUCONERO;
    piano[1][4]=BUCONERO;
