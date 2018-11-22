@@ -73,6 +73,6 @@ function livello7(){
    piano[4][19]=CHIAVE;
    piano[2][3]=LASERONEGIU;
    piano[3][3]=LASER;
-   i1=setInterval("raggioLaser(3,3)", 1500);
+   i1=setInterval("raggioLaser(3,3)", 1250);
    piano[4][3]=LASERONESU;
 }

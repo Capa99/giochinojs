@@ -100,7 +100,7 @@ function livello5(){
    piano[5][8]=ARMA;
    piano[7][8]=PORTACHIUSA;
    piano[9][19]=CHIAVE;
-   i1=setInterval("raggioLaser(3,2)", 1500);
+   i1=setInterval("raggioLaser(3,2)", 1250);
    piano[3][1]=LASERONEGIU;
    piano[3][2]=LASER;
    piano[3][3]=LASERONESU;
