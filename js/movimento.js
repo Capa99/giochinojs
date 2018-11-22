@@ -38,11 +38,17 @@ function controllaCella(x,y){
 			audio.rewindAndPlay();
 			return false;         
          case CHIAVE:
+         var audio45 = new Audio("Gun pick up sound effect 1.mp3");
+			audio45.rewindAndPlay();
 			key = 1;
 			piano[x][y] = SFONDO;
 			return true;        
         case PORTACHIUSA: 
-			if (key == 1) {           
+        var audio40 = new Audio("Roblox Death Sound Effect.mp3");
+			audio40.rewindAndPlay();
+			if (key == 1) {  
+         var audio9 = new Audio("door_lock.mp3");
+			audio9.rewindAndPlay();     
 				piano[x][y] = PORTAAPERTA;
 				return true;
 			}
@@ -110,6 +116,8 @@ function controllaCella(x,y){
 			disegnaOmino();
 			return false; 
 		case LASER:
+      var audio60 = new Audio("Laser Sound FX 1.mp3");
+			audio60.rewindAndPlay();
 			gameOver();
 		case LASERONEGIU:
 			return false;
