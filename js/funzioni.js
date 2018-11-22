@@ -170,3 +170,14 @@ function dettagliOggetti(){
 	document.getElementById("OMINO").onmouseover = function() {alert("l'omino e' il protagonista del gioco")};
 	document.getElementById("OMINOCONSPADA").onmouseover = function() {alert("l'omino con la spada potra' eliminare i nemici")};
 }
+function raggioLaser(x,y){
+	if (ominoX==x && ominoY==y)
+		gameOver();
+	if (statolaser==10)
+		statolaser=0;
+	else
+		statolaser=10;
+	piano[x][y]=statolaser;
+	disegnaCellaSpeciale(x,y,statolaser);
+	// per creare un raggio ad intermittenza: i1=setInterval("raggioLaser(x,y)", 1500);
+}

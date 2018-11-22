@@ -57,5 +57,5 @@ function livello2(){
 	n1=new Cacciatore(4,18,NEMICO);
 	intervallo=setInterval("n1.insegui()",800);
 	piano[9][9]=ARMA;
-
+	
 }

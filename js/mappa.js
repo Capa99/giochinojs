@@ -10,7 +10,7 @@ var armaY = 9;
 
 // valore iniziale dell'energia
 var energia =0;
-
+var statolaser=0;
 // costanti e parametri per la configurazioen del gioco
 var PILLOLA = 1;
 var DELTA_ENERGIA = 10;
