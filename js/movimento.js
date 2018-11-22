@@ -44,8 +44,10 @@ function controllaCella(x,y){
 			piano[x][y] = SFONDO;
 			return true;        
         case PORTACHIUSA: 
+			if(key==0){
         var audio40 = new Audio("Roblox Death Sound Effect.mp3");
 			audio40.rewindAndPlay();
+			}
 			if (key == 1) {  
          var audio9 = new Audio("door_lock.mp3");
 			audio9.rewindAndPlay();     

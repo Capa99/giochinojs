@@ -145,6 +145,8 @@ function barraClessidra() {
 
 
 window.addEventListener("load",barraClessidra,true);
+window.addEventListener("load",function(){var sottofondo = new Audio("Scary 8-bit Loop..mp3");sottofondo.play();},true);
+
 window.addEventListener("load",function(){
 	
 	document.getElementById("btnsu").addEventListener("click",su,false);
@@ -196,3 +198,4 @@ function dettagliOggetti(){
 	document.getElementById("LASER").onclick = function() {alert("ogni 2 secondi il laser si aziona, se si passa sopra si muore")};
 
 }
+
