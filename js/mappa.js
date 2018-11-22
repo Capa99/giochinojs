@@ -31,6 +31,8 @@ var key = 0;
 var PORTACHIUSA = 12;
 var PORTAAPERTA = 13;
 var LASER=10;
+var LASERONEGIU=14;
+var LASERONESU=15;
 
 var omino = "omino";
 var ominoConSpada = "ominoConSpada";
