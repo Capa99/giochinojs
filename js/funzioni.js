@@ -53,13 +53,17 @@ Cacciatore.prototype.insegui = function () {
         var max=4;  
         var random =Math.floor(Math.random() * (+max - +min)) + +min;
 		if (random==1)
+			if(newX>0)
 			newX=(newX -1 + R)%R;
 		if (random==2)
+			if(newX<R-1)
 			newX=(newX +1 + R)%R;
 		if (random==3)
+			if(newY>0)
 			newY=(newY -1 + C)%C;
 		if (random==4)
-			newX=(newY +1 + C)%C;		
+			if(newY<C-1)
+			newY=(newY +1 + C)%C;		
 		if (piano[newX][newY]!=OSTACOLO){
 			this.x= newX;
 			this.y= newY;		
@@ -101,6 +105,7 @@ function gameOver(){
 	document.getElementById("riprova").style.display="block";
     document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
 	document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
+	document.getElementById("dettagli").style.display="none";
 	
 }// il this.nome coincide con il nome dell’immagine nel file system 
 
