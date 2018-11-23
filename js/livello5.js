@@ -74,6 +74,8 @@ function livello5(){
    piano[1][10]=BUCONERO;
    piano[2][10]=BUCONERO;
    piano[2][17]=BUCONERO;
+   piano[3][1]=BUCONERO;
+   piano[3][3]=BUCONERO;
 	piano[3][11]=BUCONERO;
    piano[4][11]=BUCONERO;
    piano[4][19]=BUCONERO;
@@ -100,8 +102,4 @@ function livello5(){
    piano[5][8]=ARMA;
    piano[7][8]=PORTACHIUSA;
    piano[9][19]=CHIAVE;
-   i1=setInterval("raggioLaser(3,2)", 1250);
-   piano[3][1]=LASERONEGIU;
-   piano[3][2]=LASER;
-   piano[3][3]=LASERONESU;
 }
