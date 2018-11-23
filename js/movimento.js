@@ -26,6 +26,40 @@ function checkKeyPress (event){
 
 
 function controllaCella(x,y){
+if (omino=="omino"){
+	if(n1)
+		if(n1.x==x && n1.y==y)
+			gameOver();
+	if(n2)
+		if(n2.x==x && n2.y==y)
+			gameOver();
+	if(n3)
+		if(n3.x==x && n3.y==y)
+			gameOver();
+	if(n4)
+		if(n4.x==x && n4.y==y)
+			gameOver();
+	if(n5)
+		if(n5.x==x && n5.y==y)
+			gameOver();
+	if(n6)
+		if(n6.x==x && n6.y==y)
+			gameOver();
+}
+if (omino=="ominoConSpada"){	
+	if(n1.x==x && n1.y==y)
+		clearInterval(intervallo1);
+	if(n2.x==x && n2.y==y)
+		clearInterval(intervallo2);
+	if(n3.x==x && n3.y==y)
+		clearInterval(intervallo3);
+	if(n4.x==x && n4.y==y)
+		clearInterval(intervallo4);
+	if(n5.x==x && n5.y==y)
+		clearInterval(intervallo5);
+	if(n6.x==x && n6.y==y)
+		clearInterval(intervallo6);
+}
 	switch (piano[x][y]){
 		case ARMA:
 			var audio4 = new Audio("Sword Draw Sound Effect.mp3");
