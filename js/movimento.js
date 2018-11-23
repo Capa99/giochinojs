@@ -75,7 +75,7 @@ function controllaCella(x,y){
 			countPillole--;
 			if (countPillole==0){
 			clearInterval(id);
-            var audio7 = new Audio("Hallelujah Chorus Sound Effect.mp3");
+            var audio7 = new Audio("Victory.mp3");
             audio7.rewindAndPlay();
             audio7.volume = 0.5;
             document.getElementById("en").innerHTML="HAI VINTO!";
