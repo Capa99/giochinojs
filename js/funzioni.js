@@ -173,12 +173,16 @@ Audio.prototype.rewindAndPlay = function() {
 }
 
 function raggioLaser(x,y){
+   var audio55 = new Audio("Laser.mp3");
 	if (ominoX==x && ominoY==y)
 		gameOver();
 	if (statolaser==10)
 		statolaser=0;
-	else
+	else{
 		statolaser=10;
+		 audio55.rewindAndPlay();
+       audio55.volume = 0.5;
+   }
 	piano[x][y]=statolaser;
 	disegnaCellaSpeciale(x,y,statolaser);
 	// per creare un raggio ad intermittenza: i1=setInterval("raggioLaser(x,y)", 1500);
