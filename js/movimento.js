@@ -45,6 +45,9 @@ if (omino=="omino"){
 	if(n6)
 		if(n6.x==x && n6.y==y)
 			gameOver();
+	var audio3 = new Audio("Demon Scream.mp3");
+					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
 }
 if (omino=="ominoConSpada"){
 	if(n1)
