@@ -133,7 +133,7 @@ function barraEnergia() {
 function barraClessidra() {
 	var elem = document.getElementById("myBar");   
 	var width = 100;
-	id = setInterval(fram, 1000); // per una barra che avanza con il tempo
+	id = setInterval(fram, 735); // per una barra che avanza con il tempo
 		function fram() { // esempi di inner function 
 		if (width == 0) {
 			clearInterval(id); // TEMPO SCADUTO, gestire l'evento (per esempio game over o vita)
