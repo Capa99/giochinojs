@@ -146,7 +146,7 @@ function barraClessidra() {
 
 
 window.addEventListener("load",barraClessidra,true);
-window.addEventListener("load",function(){var sottofondo = new Audio("Scary 8-bit Loop..mp3");sottofondo.play();},true);
+window.addEventListener("load",function(){var sottofondo = new Audio("Scary 8-bit Loop..mp3");sottofondo.play();sottofondo.volume = 0.2;},true);
 
 window.addEventListener("load",function(){
 	
