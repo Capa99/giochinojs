@@ -51,6 +51,7 @@ function livello7(){
 	piano[3][19]=PORTACHIUSA;
 	piano[5][18]=PORTACHIUSA;
 	piano[5][19]=PORTACHIUSA;
+	piano[4][15]=PORTACHIUSA;
 	piano[8][3]=CHIAVE;
 	piano[4][18]=PORTALE1;
 	PORTALE1_X=4;
