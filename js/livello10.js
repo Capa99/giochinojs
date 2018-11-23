@@ -8,8 +8,7 @@ function livello10(){
 	piano[1][6]=OSTACOLO;
 	piano[2][3]=OSTACOLO;
 	piano[2][13]=OSTACOLO;
-   piano[4][8]=OSTACOLO;
-   piano[4][9]=OSTACOLO;
+   piano[5][8]=OSTACOLO;
 	piano[4][13]=OSTACOLO;
    piano[5][3]=OSTACOLO;
    piano[5][5]=OSTACOLO;
@@ -24,6 +23,13 @@ function livello10(){
    piano[8][2]=OSTACOLO;
    piano[8][14]=OSTACOLO;
    piano[8][16]=OSTACOLO;
+   piano[6][12]=OSTACOLO;
+   piano[6][14]=OSTACOLO;
+   piano[6][18]=OSTACOLO;
+   piano[8][15]=OSTACOLO;
+   piano[8][12]=OSTACOLO;
+   piano[8][13]=OSTACOLO;
+   piano[8][14]=OSTACOLO;
 	piano[0][1]=FUNGO;
 	piano[0][8]=FUNGO;
 	piano[1][3]=FUNGO;
@@ -78,6 +84,7 @@ function livello10(){
    piano[3][3]=BUCONERO;
 	piano[3][11]=BUCONERO;
    piano[4][11]=PORTACHIUSA;
+   piano[7][12]=PORTACHIUSA;
    piano[4][19]=BUCONERO;
    piano[5][11]=BUCONERO;
    piano[6][1]=BUCONERO;
@@ -88,7 +95,7 @@ function livello10(){
    piano[8][10]=BUCONERO;
    piano[8][11]=BUCONERO;
 	piano[9][1]=BUCONERO;
-   piano[9][11]=BUCONERO;
+   piano[9][11]=OSTACOLO;
 	piano[9][0]=PORTALE1;
 	PORTALE1_X=9;
 	PORTALE1_Y=0;
@@ -99,7 +106,9 @@ function livello10(){
    intervallo1 = setInterval("n1.insegui()",500);
    n2 = new Cacciatore(3,18,RUNNER);
    intervallo2 = setInterval("n2.insegui()",500);
-   piano[5][8]=ARMA;
+   n3 = new Cacciatore(9,13,RUNNER);
+   intervallo3 = setInterval("n3.insegui()",500);
+   piano[7][11]=ARMA;
    piano[7][8]=PORTACHIUSA;
    piano[9][19]=CHIAVE;
 }
