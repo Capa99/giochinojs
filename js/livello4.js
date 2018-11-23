@@ -26,7 +26,7 @@ function livello4(){
 	piano[4][3]=FUNGO;
    piano[5][4]=FUNGO;
    piano[5][7]=FUNGO;
-   piano[6][18]=FUNGO;
+   piano[6][18]=BUCONERO;
    piano[7][2]=FUNGO;
    piano[7][3]=FUNGO;
    piano[8][18]=FUNGO;
@@ -43,14 +43,14 @@ function livello4(){
 	piano[2][18]=PILLOLA;
    piano[3][15]=PILLOLA;
 	piano[4][4]=PILLOLA;
-   piano[6][19]=PILLOLA;
+   piano[6][19]=BUCONERO;
 	piano[7][6]=PILLOLA;
    piano[7][10]=PILLOLA;
 	piano[8][3]=PILLOLA;
    piano[8][16]=PILLOLA;
 	piano[9][9]=PILLOLA;
-	countPillole=18;
-	pilloletot=18;
+	countPillole=17;
+	pilloletot=17;
 	piano[5][0]=BUCONERO;
    piano[6][10]=BUCONERO;
    piano[6][11]=BUCONERO;
