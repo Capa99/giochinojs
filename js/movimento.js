@@ -45,29 +45,51 @@ if (omino=="omino"){
 	if(n6)
 		if(n6.x==x && n6.y==y)
 			gameOver();
-	var audio3 = new Audio("Demon Scream.mp3");
-					audio3.rewindAndPlay();
-               audio3.volume = 0.5;
+
 }
 if (omino=="ominoConSpada"){
 	if(n1)
-		if(n1.x==x && n1.y==y)
+		if(n1.x==x && n1.y==y){
 			clearInterval(intervallo1);
+				var audio3 = new Audio("Demon Scream.mp3");
+					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
+		}
 	if(n2)
-		if(n2.x==x && n2.y==y)
+		if(n2.x==x && n2.y==y){
+				var audio3 = new Audio("Demon Scream.mp3");
+					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
 			clearInterval(intervallo2);
+		}
 	if(n3)
-		if(n3.x==x && n3.y==y)
+		if(n3.x==x && n3.y==y){
+				var audio3 = new Audio("Demon Scream.mp3");
+					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
 			clearInterval(intervallo3);
+		}
 	if(n4)
-		if(n4.x==x && n4.y==y)
+		if(n4.x==x && n4.y==y){
+				var audio3 = new Audio("Demon Scream.mp3");
+					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
 			clearInterval(intervallo4);
+		}
 	if(n5)
-		if(n5.x==x && n5.y==y)
+		if(n5.x==x && n5.y==y){
+				var audio3 = new Audio("Demon Scream.mp3");
+					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
 			clearInterval(intervallo5);
+		}
 	if(n6)
-		if(n6.x==x && n6.y==y)
+		if(n6.x==x && n6.y==y){
+				var audio3 = new Audio("Demon Scream.mp3");
+					audio3.rewindAndPlay();
+               audio3.volume = 0.5;
 			clearInterval(intervallo6);
+		}
 }
 	switch (piano[x][y]){
 		case ARMA:
