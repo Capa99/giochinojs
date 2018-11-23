@@ -75,6 +75,7 @@ function controllaCella(x,y){
 			countPillole--;
 			if (countPillole==0){
 			clearInterval(id);
+			clearInterval(i1);
             var audio7 = new Audio("Victory.mp3");
             audio7.rewindAndPlay();
             audio7.volume = 0.5;
