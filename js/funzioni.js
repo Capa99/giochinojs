@@ -104,8 +104,9 @@ function gameOver(){
 	clearInterval(intervallo4);
 	clearInterval(intervallo5);
 	clearInterval(intervallo6);
+	if (i1){
 	clearInterval(i1);
-	
+	}
 	var audio4 = new Audio("Evil Laugh.mp3");
 	audio4.rewindAndPlay();
 	document.getElementById("en").innerHTML="HAI PERSO!";
