@@ -6,14 +6,14 @@ function livello7(){
 	piano[1][1]=OSTACOLO;
 	piano[2][1]=OSTACOLO;
 	piano[3][1]=OSTACOLO;
-	piano[3][2]=OSTACOLO;
+	piano[3][2]=LASERONEGIU;
 	piano[3][15]=OSTACOLO;
    piano[3][16]=OSTACOLO;
    piano[3][17]=OSTACOLO;
 	piano[4][17]=OSTACOLO;
    piano[5][0]=OSTACOLO;
    piano[5][1]=OSTACOLO;
-   piano[5][2]=OSTACOLO;
+   piano[5][2]=LASERONESU;
    piano[5][15]=OSTACOLO;
 	piano[5][16]=OSTACOLO;
    piano[5][17]=OSTACOLO;
@@ -37,12 +37,13 @@ function livello7(){
    intervallo1 = setInterval("n1.insegui()",800);
    n2 = new Cacciatore(0,13,NEMICO);
    intervallo2 = setInterval("n2.insegui()",800);
-   n3 = new Cacciatore(2,4,NEMICO);
+   n3 = new Cacciatore(2,6,NEMICO);
    intervallo3 = setInterval("n3.insegui()",800);
-   n4 = new Cacciatore(6,4,NEMICO);
+   n4 = new Cacciatore(6,6,NEMICO);
    intervallo4 = setInterval("n4.insegui()",800);
    n5 = new Cacciatore(9,6,NEMICO);
    intervallo5 = setInterval("n5.insegui()",800);
    n6 = new Cacciatore(9,13,NEMICO);
    intervallo6 = setInterval("n6.insegui()",800);
+   i1=setInterval("raggioLaser(4,2)", 1250);
 }
