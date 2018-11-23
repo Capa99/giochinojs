@@ -77,7 +77,7 @@ function livello10(){
    piano[3][1]=BUCONERO;
    piano[3][3]=BUCONERO;
 	piano[3][11]=BUCONERO;
-   piano[4][11]=BUCONERO;
+   piano[4][11]=PORTACHIUSA;
    piano[4][19]=BUCONERO;
    piano[5][11]=BUCONERO;
    piano[6][1]=BUCONERO;
