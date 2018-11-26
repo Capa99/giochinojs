@@ -188,8 +188,7 @@ window.addEventListener("load",function(){
 	document.getElementById("gportale1").addEventListener("click",generaPortale1,false);
 	document.getElementById("gportale2").addEventListener("click",generaPortale2,false);
 	document.getElementById("gostacolo").addEventListener("click",generaOstacolo,false); */		
-	document.getElementById("dettagli").addEventListener("mouseover",dettagliOggetti,false);
-			$('#popoverostacolo').popover();
+	$('#popoverostacolo').popover();
 	$('#popoverspada').popover();
 	$('#popoverpillola').popover();
 	$('#popoverfungo').popover();
