@@ -23,6 +23,18 @@
    #gameover {text-align: center; position: fixed;display: none;width: 100%;height: 100%;top: 0;left: 0;right: 0; bottom: 0;background-color: rgba(0,0,0,0.5);z-index: 2; cursor: pointer;}
    #win{text-align: center; position: fixed; display:none;width: 100%;height: 100%;top: 0;left: 0;right: 0; bottom: 0;background-color: rgba(0,0,0,0.5);z-index: 2; cursor: pointer;}
 	#detta{text-align:center;}
+	#go{    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+	}
+		#wi{    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+	}
 </style>
 <script type="text/javascript" src="js/mappa.js"></script>
 <script type="text/javascript" src="js/movimento.js"></script>
@@ -288,11 +300,11 @@
 	</p>
 	
 	<div id="gameover" onClick="offGameOver()">
-		<h1><img src="gameover.jpg"></img></h1>
+		<h1 id="go"><img src="gameover.jpg"></img></h1>
 	</div>	
 	
 	<div id="win" onClick="offWin()">
-		<h1><img src="coppa.jpg"></img></h1>
+		<h1 id="wi"><img src="coppa.jpg"></img></h1>
 	</div>	
 	
 	
