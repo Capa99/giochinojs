@@ -137,26 +137,8 @@ if (omino=="ominoConSpada"){
 			document.getElementById("energia").innerHTML=energia;
 			barraEnergia();
 			piano[x][y] = SFONDO;
-			countPillole--;
-			if (countPillole==0){
-			clearInterval(id);
-			clearInterval(i1);
-            var audio7 = new Audio("Victory.mp3");
-            audio7.rewindAndPlay();
-            audio7.volume = 0.5;
-            document.getElementById("en").innerHTML="HAI VINTO!";
-			document.getElementById("gioco").innerHTML="<img src=\"coppa.jpg\">";
-			document.getElementById("lvl").style.display="block";
-			document.getElementById("riprova").style.display="block";
-         document.getElementById("energia").style.display="none";
-         document.getElementById("centrosb").style.display="none";
-         document.getElementById("myBar").style.display="none";
-			document.getElementById("btntouch").style.display="none";
-			document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
-			document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
-			document.getElementById("dettagli").style.display="none";
-			document.getElementById("det").style.display="none";
-			}
+			countPillole--
+			winn();
 			return true;
 		case FUNGO:
 			var audio2 = new Audio("reverse mario power up sound effect.mp3");
@@ -165,7 +147,7 @@ if (omino=="ominoConSpada"){
 			energia = energia - DELTA_ENERGIA-10;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = SFONDO;
-			if(energia<0)	
+				energia<0;
 				gameOver();
 			return true;
 		case BUCONERO:

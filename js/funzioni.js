@@ -1,3 +1,5 @@
+
+
 function generaFungo(){
     generaOggetto(FUNGO);	
 }
@@ -97,32 +99,59 @@ Cacciatore.prototype.insegui = function () {
 }
 	
 function gameOver(){
-	clearInterval(id);
-    clearInterval(intervallo1);
-	clearInterval(intervallo2);
-	clearInterval(intervallo3);
-	clearInterval(intervallo4);
-	clearInterval(intervallo5);
-	clearInterval(intervallo6);
-	if (i1){
-	clearInterval(i1);
-	}
+	riprova();
+	document.getElementById("gameover").style.display = "block";
+	clear();
 	var audio4 = new Audio("Evil Laugh.mp3");
 	audio4.rewindAndPlay();
-	document.getElementById("en").innerHTML="HAI PERSO!";
-	document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
-	document.getElementById("barraCompletamento").style.display="none";
-	document.getElementById("centrosb").style.display="none";
-	document.getElementById("myBar").style.display="none";
-	document.getElementById("energia").style.display="none";
-	document.getElementById("btntouch").style.display="none";
-	document.getElementById("riprova").style.display="block";
-    document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
-	document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
-	document.getElementById("dettagli").style.display="none";
-	document.getElementById("det").style.display="none";
+	energia=0;
+	document.getElementbYId("energia").innerHTML=energia;
+	//document.getElementById("en").innerHTML="HAI PERSO!";
+	//document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
+	//document.getElementById("gioco").style.display="none";
+	//document.getElementById("barraCompletamento").style.display="none";
+	//document.getElementById("centrosb").style.display="none";
+	//document.getElementById("myBar").style.display="none";
+	//document.getElementById("energia").style.display="none";
+	//document.getElementById("btntouch").style.display="none";
+	//document.getElementById("riprova").style.display="block";
+	//document.getElementById("dettagli").style.display="none";
+	//document.getElementById("det").style.display="none";
 	
-}// il this.nome coincide con il nome dell’immagine nel file system 
+}
+function winn(){
+	if (countPillole==0){
+			passaLivello();
+            var audio7 = new Audio("Victory.mp3");
+            audio7.rewindAndPlay();
+            audio7.volume = 0.5;
+			clear();
+			document.getElementById("win").style.display = "block";
+			
+            energia=0;
+			document.getElementbYId("energia").innerHTML=energia;
+			//document.getElementById("gioco").style.display="none";	
+			//document.getElementById("energia").style.display="none";
+			//document.getElementById("centrosb").style.display="none";
+			//document.getElementById("myBar").style.display="none";
+			//document.getElementById("btntouch").style.display="none";
+			//document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
+			//document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
+			//document.getElementById("dettagli").style.display="none";
+			//document.getElementById("det").style.display="none";
+			
+			}
+}	
+
+// il this.nome coincide con il nome dell’immagine nel file system
+
+function offGameOver(){
+document.getElementById("gameover").style.display = "none"; 
+}
+
+function offWin(){
+document.getElementById("win").style.display = "none"; 
+}
 
 function barraEnergia() {
     var elem = document.getElementById("barraCompletamento");   
@@ -148,7 +177,7 @@ function barraClessidra() {
 }
 
 
-window.addEventListener("load",barraClessidra,true);
+
 window.addEventListener("load",function(){var sottofondo = new Audio("Scary 8-bit Loop..mp3");sottofondo.play();sottofondo.volume = 0.2;},true);
 
 window.addEventListener("load",function(){
@@ -206,4 +235,247 @@ function dettagliOggetti(){
 	document.getElementById("LASER").onclick = function() {alert("ogni 2 secondi il laser si aziona, se si passa sopra si muore")};
 
 }
+	
 
+function disegnaLivello1(){	
+	energia=0;
+	omino="omino";
+	key=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=1;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello1();
+	disegnaPiano();
+}
+
+function disegnaLivello2(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=2;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello2();
+	disegnaPiano();
+}
+
+function disegnaLivello3(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=3;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello3();
+	disegnaPiano();
+}
+
+function disegnaLivello4(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=4;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello4();
+	disegnaPiano();
+}
+
+function disegnaLivello5(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=5;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello5();
+	disegnaPiano();
+}
+
+function disegnaLivello6(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=6;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello6();
+	disegnaPiano();
+}
+
+function disegnaLivello7(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=7;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello7();
+	disegnaPiano();
+}
+
+function disegnaLivello8(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=8;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello8();
+	disegnaPiano();
+}
+
+function disegnaLivello9(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=9;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello9();
+	disegnaPiano();
+}
+
+function disegnaLivello10(){
+	omino="omino";
+	key=0;
+	energia=0;
+	document.getElementById("energia").innerHTML=energia;
+	livello=10;
+	document.getElementById("gioco").style.display="block";
+	clear();
+	barraClessidra();
+	svuotaPiano();
+	livello10();
+	disegnaPiano();
+}
+
+	
+function svuotaPiano(){
+	for (var i=0; i<R; i++){
+		for (var j=0; j<C;j++){
+			piano[i][j]=SFONDO;
+		}
+	}
+}
+
+
+function clear(){
+	perc=0;
+	document.getElementById("barraCompletamento").style.width=perc+ '%';
+	clearInterval(id);
+    clearInterval(intervallo1);
+	clearInterval(intervallo2);
+	clearInterval(intervallo3);
+	clearInterval(intervallo4);
+	clearInterval(intervallo5);
+	clearInterval(intervallo6);
+	if (i1){
+	clearInterval(i1);
+	}
+}
+
+function passaLivello(){
+	if(livello==1){
+		document.getElementById("livello1").style.display="none";
+		document.getElementById("livello2").style.display="block";
+	}
+	if(livello==2){
+		document.getElementById("livello2").style.display="none";
+		document.getElementById("livello3").style.display="block";
+	}
+	if(livello==3){
+		document.getElementById("livello3").style.display="none";
+		document.getElementById("livello4").style.display="block";
+	}
+	if(livello==4){
+		document.getElementById("livello4").style.display="none";
+		document.getElementById("livello5").style.display="block";
+	}
+	if(livello==5){
+		document.getElementById("livello5").style.display="none";
+		document.getElementById("livello6").style.display="block";
+	}
+	if(livello==6){
+		document.getElementById("livello6").style.display="none";
+		document.getElementById("livello7").style.display="block";
+	}
+	if(livello==7){
+		document.getElementById("livello7").style.display="none";
+		document.getElementById("livello8").style.display="block";
+	}
+	if(livello==8){
+		document.getElementById("livello8").style.display="none";
+		document.getElementById("livello9").style.display="block";
+	}
+	if(livello==9){
+		document.getElementById("livello9").style.display="none";
+		document.getElementById("livello10").style.display="block";
+	}
+	if(livello==10){
+		document.getElementById("livello10").style.display="none";
+		
+	}
+}
+
+function riprova(){
+	
+	if(livello==1){
+		document.getElementById("livello1").value="RIPROVA";
+	}
+	if(livello==2){
+		document.getElementById("livello2").value="RIPROVA";
+	}
+	if(livello==3){
+		document.getElementById("livello3").value="RIPROVA";
+	}
+	if(livello==4){
+		document.getElementById("livello4").value="RIPROVA";
+	}
+	if(livello==5){
+		document.getElementById("livello5").value="RIPROVA";
+	}
+	if(livello==6){
+		document.getElementById("livello6").value="RIPROVA";
+	}
+	if(livello==7){
+		document.getElementById("livello7").value="RIPROVA";
+	}
+	if(livello==8){
+		document.getElementById("livello8").value="RIPROVA";
+	}
+	if(livello==9){
+		document.getElementById("livello9").value="RIPROVA";
+	}
+	if(livello==10){
+		document.getElementById("livello10").style.display="none";
+		
+	}
+}

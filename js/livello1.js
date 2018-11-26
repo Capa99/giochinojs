@@ -1,5 +1,5 @@
-window.addEventListener("load",livello1,true);
-window.addEventListener("load",disegnaPiano,true);
+//window.addEventListener("load",livello1,true);
+//window.addEventListener("load",disegnaPiano,true);
 
 
 function livello1(){

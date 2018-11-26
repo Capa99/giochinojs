@@ -7,7 +7,7 @@ var width = 0;
 // posizione dell'arma
 var armaX = 9; 
 var armaY = 9;
-
+var livello=0;
 // valore iniziale dell'energia
 var energia =0;
 var statolaser=0;
@@ -89,15 +89,18 @@ for (var i=0; i<R; i++) {
 }*/
 
 function disegnaPiano(){
+
+
 	for (var i=0; i<R; i++){
 		for (var j=0; j<C;j++){
 			disegnaCella(i,j);
 		}
 	}
 	// disegna l'omino in una data posizione
+	ominoX=0;
+	ominoY=0;
 	disegnaCellaSpeciale(ominoX,ominoY,omino); 
-	document.getElementById("lvl").style.display="none";
-	document.getElementById("riprova").style.display="none";
+
 } 
 
 function generaPillola(){

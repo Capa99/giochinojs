@@ -1,5 +1,5 @@
-window.addEventListener("load",livello10,true);
-window.addEventListener("load",disegnaPiano,true);
+//window.addEventListener("load",livello10,true);
+//window.addEventListener("load",disegnaPiano,true);
 
 function livello10(){
 	piano[0][3]=OSTACOLO;

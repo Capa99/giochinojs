@@ -1,5 +1,5 @@
-window.addEventListener("load",livello9,true);
-window.addEventListener("load",disegnaPiano,true);
+//window.addEventListener("load",livello9,true);
+//window.addEventListener("load",disegnaPiano,true);
 
 function livello9(){
 	piano[0][7]=OSTACOLO;
@@ -74,7 +74,7 @@ function livello9(){
 	PORTALE2_Y=12;
    
    n1 = new Cacciatore(0,8,RUNNER);
-   intervallo = setInterval("n1.insegui()",500);
+   intervallo1 = setInterval("n1.insegui()",500);
    n2 = new Cacciatore(4,19,RUNNER);
    intervallo2 = setInterval("n2.insegui()",500);
    n3 = new Cacciatore(9,8,RUNNER);
