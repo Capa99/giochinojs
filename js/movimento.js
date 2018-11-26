@@ -54,6 +54,8 @@ if (omino=="ominoConSpada"){
 				var audio3 = new Audio("Demon Scream.mp3");
 					audio3.rewindAndPlay();
                audio3.volume = 0.5;
+			   n1.x=null;
+			   n1.y=null;
 		}
 	if(n2)
 		if(n2.x==x && n2.y==y){
@@ -61,6 +63,8 @@ if (omino=="ominoConSpada"){
 					audio3.rewindAndPlay();
                audio3.volume = 0.5;
 			clearInterval(intervallo2);
+			n2.x=null;
+			n2.y=null;
 		}
 	if(n3)
 		if(n3.x==x && n3.y==y){
@@ -68,6 +72,8 @@ if (omino=="ominoConSpada"){
 					audio3.rewindAndPlay();
                audio3.volume = 0.5;
 			clearInterval(intervallo3);
+			n3.x=null;
+			n3.y=null;
 		}
 	if(n4)
 		if(n4.x==x && n4.y==y){
@@ -75,6 +81,8 @@ if (omino=="ominoConSpada"){
 					audio3.rewindAndPlay();
                audio3.volume = 0.5;
 			clearInterval(intervallo4);
+			n4.x=null;
+			n4.y=null;
 		}
 	if(n5)
 		if(n5.x==x && n5.y==y){
@@ -82,6 +90,8 @@ if (omino=="ominoConSpada"){
 					audio3.rewindAndPlay();
                audio3.volume = 0.5;
 			clearInterval(intervallo5);
+			n5.x=null;
+			n5.y=null;
 		}
 	if(n6)
 		if(n6.x==x && n6.y==y){
@@ -89,6 +99,8 @@ if (omino=="ominoConSpada"){
 					audio3.rewindAndPlay();
                audio3.volume = 0.5;
 			clearInterval(intervallo6);
+			n6.x=null;
+			n6.y=null;
 		}
 }
 	switch (piano[x][y]){
