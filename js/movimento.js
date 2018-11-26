@@ -159,7 +159,7 @@ if (omino=="ominoConSpada"){
 			energia = energia - DELTA_ENERGIA-10;
 			document.getElementById("energia").innerHTML=energia;
 			piano[x][y] = SFONDO;
-				energia<0;
+				if(energia<0)
 				gameOver();
 			return true;
 		case BUCONERO:
