@@ -571,7 +571,7 @@ function riprova(){
 		document.getElementById("livello9").value="RIPROVA";
 	}
 	if(livello==10){
-		document.getElementById("livello10").style.display="none";
+		document.getElementById("livello10").value="RIPROVA";
 		
 	}
 }
