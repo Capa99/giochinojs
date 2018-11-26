@@ -5,22 +5,24 @@
    #centro {text-align: center;}
    #logo {width: 300px; height: 200px;}
    #en {display:none;text-align: center; font-family: jokerman; color: #c0d031; font-size: 50px;}
-   #centrosb { text-align: center; border: #3a8d0a; border-style: solid; border-width: 10px; height: fit-content; width: 680px; margin-left: auto; margin-right: auto;}
-   #sfondoBarra {display:none; width: 680px; height: 30px; position: absolute; background-color: #ddd; border: 2px solid green; border-radius: 12px;}
-   #barraCompletamento {display:none; width: 0px; background-color: #4CAF50; height: 30px; position: relative; border: 2px solid green; border-radius: 12px;}
+   #centrosb {text-align: center; border: #3a8d0a; border-style: solid; border-width: 10px; height: fit-content; width: 680px; margin-left: auto; margin-right: auto;}
+   #sfondoBarra {display:none;width: 680px; height: 30px; position: absolute; background-color: #ddd; border: 2px solid green; border-radius: 12px;}
+   #barraCompletamento {display:none;width: 0px; background-color: #4CAF50; height: 30px; position: relative; border: 2px solid green; border-radius: 12px;}
    #gioco {display:none; text-align: center; border: #56340a; border-style: solid; border-width: 10px; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto;resize: both; overflow: auto;padding: 0px; width: 1310px;}
-   #energia {display:none; text-align: center; font-family: jokerman; color: #c0d031; font-size: 50px;}
+   #energia {display:none;text-align: center; font-family: jokerman; color: #c0d031; font-size: 50px;}
    #btntouch {display:none; text-align: center;}
    #body {background-color:#3a8d0a;}
-   #myBar {display:none; width: 100%; height: 30px; position: absolute; background-color: #98c5c3;border: 2px solid blue;border-radius: 12px;}
+   #myBar {display:none;width: 100%; height: 30px; position: absolute; background-color: #98c5c3;border: 2px solid blue;border-radius: 12px;}
    #livello1{display:block;margin:0px auto;}#livello2{display:none;margin:0px auto;}#livello3{display:none;margin:0px auto;}#livello4{display:none;margin:0px auto;}#livello5{display:none;margin:0px auto;}#livello6{display:none;margin:0px auto;}
    #livello7{display:none;margin:0px auto;}#livello8{display:none;margin:0px auto;}#livello9{display:none;margin:0px auto;}#livello10{display:none;margin:0px auto;}
    ul{float: left;list-style-type: none; margin: 0;padding: 0;width: 90px;background-color: #f1f1f1;}
    li a {display: block;color: #000;padding: 8px 16px; text-decoration: none;}
    li a:hover {background-color: #3a8d0a; color: white;}
    #det{font-family: jokerman; color: #c0d031; font-size: 50px;}
+   #dettagli{background-color:#3a8d0a;}
    #gameover {text-align: center; position: fixed;display: none;width: 100%;height: 100%;top: 0;left: 0;right: 0; bottom: 0;background-color: rgba(0,0,0,0.5);z-index: 2; cursor: pointer;}
    #win{text-align: center; position: fixed; display:none;width: 100%;height: 100%;top: 0;left: 0;right: 0; bottom: 0;background-color: rgba(0,0,0,0.5);z-index: 2; cursor: pointer;}
+	#detta{text-align:center;}
 </style>
 <script type="text/javascript" src="js/mappa.js"></script>
 <script type="text/javascript" src="js/movimento.js"></script>
@@ -35,6 +37,10 @@
 <script type="text/javascript" src="js/livello8.js"></script>
 <script type="text/javascript" src="js/livello9.js"></script>
 <script type="text/javascript" src="js/livello10.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
 </head>
 <body id="body">
 	<p id="centro">
@@ -48,8 +54,10 @@
 	<br> <br> <br>
 	<h1 id="en">PUNTI: </h1>
 	<p id="energia">0</p>	
+	<div id="detta">
 	<a id="det">DETTAGLI</a><br>
-	<div id="dettagli">	
+
+<div id="dettagli">	
 <a> <img id="popoverostacolo" class="btn" src="img1/3.jpg" href="#" data-content="Non puoi passare sopra a questo oggetto"rel="popover" data-placement="bottom" data-original-title="Ostacolo" data-trigger="hover"></a>
 <a> <img id="popoverspada" class="btn" src="img1/2.jpg" href="#" data-content="Ti permette di uccidere i nemici"rel="popover" data-placement="bottom" data-original-title="Spada" data-trigger="hover"></a>
 <a> <img id="popoverpillola" class="btn" src="img1/1.jpg" href="#" data-content="Prendile tutte per superare il livello"rel="popover" data-placement="bottom" data-original-title="Pillola" data-trigger="hover"></a>
@@ -62,9 +70,10 @@
 <a> <img id="popoverominoConSpada" class="btn" src="img1/ominoConSpada.jpg" href="#" data-content="Tu ma con una spada"rel="popover" data-placement="bottom" data-original-title="Protagonista con spada" data-trigger="hover"></a>
 <a> <img id="popoverporta" class="btn" src="img1/12.jpg" href="#" data-content="Ti servirà una chiave per aprire questa porta"rel="popover" data-placement="bottom" data-original-title="Porta" data-trigger="hover"></a>
 <a> <img id="popoverchiave" class="btn" src="img1/11.jpg" href="#" data-content="Ti permette di aprire le porte"rel="popover" data-placement="bottom" data-original-title="Chiave" data-trigger="hover"></a>
-<a> <img id="popoverlaser" class="btn" src="img1/15.jpg" href="#" data-content="CARICATE IL LASEROOOONEE"rel="popover" data-placement="bottom" data-original-title="Laser" data-trigger="hover"></a><
+<a> <img id="popoverlaser" class="btn" src="img1/15.jpg" href="#" data-content="CARICATE IL LASEROOOONEE"rel="popover" data-placement="bottom" data-original-title="Laser" data-trigger="hover"></a>
 
 	</div>
+</div>
 	<p id="gioco" class="col-sm-20">
 		<img id="c0_0" src="img1/0.jpg">
 		<img id="c0_1" src="img1/0.jpg">
