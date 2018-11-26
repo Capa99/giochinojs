@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 #classifica {text-align: center; font-family: jokerman; color: #c0d031; font-size: 50px;}
 #table {text-align: center; border: #56340a; border-style: solid; border-width: 10px; height: fit-content; width: fit-content; margin-left: auto; margin-right: auto;}
-
+#primo {background: #64f239;}
+#secondo {background: #f2ec39;}
+#terzo {background: #f23939;}
 body {background-color:#3a8d0a;}
+th, td {color: black;}
+th {background: #d1ffc3}
+table {background: #909a8d;}
 </style>
 </head>
 <body>
+<div class="container">
 	<h1 id="classifica">CLASSIFICA</h2>
-	<table id="table" width="100px">
+	<table id= "table" class="table table-bordered">
+   <thead>
    <tr>
 		<th>Nickname</th>
 		<th>Punteggio</th> 
 		<th>Posizione</th>
    </tr>
-	<tr>
+   </thead>
+   <tbody>
+	<tr id="primo">
       <td>Federico</td>
 		<td>10000</td>
 		<td>Primo</td>
 	</tr>
-	<tr>
+	<tr id="secondo">
+		<td>Federico</td>
+		<td>10000</td>
+		<td>Primo</td>
+	</tr>
+	<tr id="terzo">
 		<td>Federico</td>
 		<td>10000</td>
 		<td>Primo</td>
@@ -31,12 +50,28 @@ body {background-color:#3a8d0a;}
 		<td>10000</td>
 		<td>Primo</td>
 	</tr>
-	<tr>
+   <tr>
 		<td>Federico</td>
 		<td>10000</td>
 		<td>Primo</td>
 	</tr>
+   <tr>
+		<td>Federico</td>
+		<td>10000</td>
+		<td>Primo</td>
+	</tr>
+   <tr>
+		<td>Federico</td>
+		<td>10000</td>
+		<td>Primo</td>
+	</tr>
+   <tr>
+		<td>Federico</td>
+		<td>10000</td>
+		<td>Primo</td>
+	</tr>
+   </tbody>
 	</table>
-
+</div>
 </body>
 </html>
