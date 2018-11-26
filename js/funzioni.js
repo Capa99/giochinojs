@@ -104,8 +104,6 @@ function gameOver(){
 	clear();
 	var audio4 = new Audio("Evil Laugh.mp3");
 	audio4.rewindAndPlay();
-	energia=0;
-	document.getElementbYId("energia").innerHTML=energia;
 	//document.getElementById("en").innerHTML="HAI PERSO!";
 	//document.getElementById("gioco").innerHTML="<img src=\"gameover.jpg\" >";
 	//document.getElementById("gioco").style.display="none";
@@ -113,10 +111,12 @@ function gameOver(){
 	//document.getElementById("centrosb").style.display="none";
 	//document.getElementById("myBar").style.display="none";
 	//document.getElementById("energia").style.display="none";
-	//document.getElementById("btntouch").style.display="none";
+	document.getElementById("btntouch").style.display="none";
 	//document.getElementById("riprova").style.display="block";
 	//document.getElementById("dettagli").style.display="none";
 	//document.getElementById("det").style.display="none";
+	document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
 	
 }
 function winn(){
@@ -127,16 +127,13 @@ function winn(){
             audio7.volume = 0.5;
 			clear();
 			document.getElementById("win").style.display = "block";
-			
-            energia=0;
-			document.getElementbYId("energia").innerHTML=energia;
 			//document.getElementById("gioco").style.display="none";	
 			//document.getElementById("energia").style.display="none";
 			//document.getElementById("centrosb").style.display="none";
 			//document.getElementById("myBar").style.display="none";
-			//document.getElementById("btntouch").style.display="none";
-			//document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
-			//document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
+			document.getElementById("btntouch").style.display="none";
+			document.getElementById("body").removeEventListener("keydown",checkKeyDown,false);
+			document.getElementById("body").removeEventListener("keypress",checkKeyPress,false);
 			//document.getElementById("dettagli").style.display="none";
 			//document.getElementById("det").style.display="none";
 			
@@ -178,7 +175,6 @@ function barraClessidra() {
 
 
 
-window.addEventListener("load",function(){var sottofondo = new Audio("Scary 8-bit Loop..mp3");sottofondo.play();sottofondo.volume = 0.2;},true);
 
 window.addEventListener("load",function(){
 	
@@ -191,9 +187,7 @@ window.addEventListener("load",function(){
 	document.getElementById("gbuco").addEventListener("click",generaBuconero,false);
 	document.getElementById("gportale1").addEventListener("click",generaPortale1,false);
 	document.getElementById("gportale2").addEventListener("click",generaPortale2,false);
-	document.getElementById("gostacolo").addEventListener("click",generaOstacolo,false); */	
-	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
-	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("gostacolo").addEventListener("click",generaOstacolo,false); */		
 	document.getElementById("dettagli").addEventListener("mouseover",dettagliOggetti,false);
 });
 
@@ -237,7 +231,16 @@ function dettagliOggetti(){
 }
 	
 
-function disegnaLivello1(){	
+function disegnaLivello1(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	energia=0;
 	omino="omino";
 	key=0;
@@ -252,6 +255,15 @@ function disegnaLivello1(){
 }
 
 function disegnaLivello2(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -266,6 +278,15 @@ function disegnaLivello2(){
 }
 
 function disegnaLivello3(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -280,6 +301,15 @@ function disegnaLivello3(){
 }
 
 function disegnaLivello4(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -294,6 +324,15 @@ function disegnaLivello4(){
 }
 
 function disegnaLivello5(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -308,6 +347,15 @@ function disegnaLivello5(){
 }
 
 function disegnaLivello6(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -322,6 +370,15 @@ function disegnaLivello6(){
 }
 
 function disegnaLivello7(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -336,6 +393,15 @@ function disegnaLivello7(){
 }
 
 function disegnaLivello8(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -350,6 +416,15 @@ function disegnaLivello8(){
 }
 
 function disegnaLivello9(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
@@ -364,6 +439,15 @@ function disegnaLivello9(){
 }
 
 function disegnaLivello10(){
+	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
+	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
+	document.getElementById("energia").style.display="block";
+	document.getElementById("en").style.display="block";
+	document.getElementById("btntouch").style.display="block";
+	document.getElementById("myBar").style.display="block";
+	document.getElementById("sfondoBarra").style.display="block";
+	document.getElementById("barraCompletamento").style.display="block";
+	document.getElementById("btntouch").style.display="block";
 	omino="omino";
 	key=0;
 	energia=0;
