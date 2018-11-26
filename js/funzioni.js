@@ -195,6 +195,19 @@ window.addEventListener("load",function(){
 	document.getElementById("body").addEventListener("keydown",checkKeyDown,false);
 	document.getElementById("body").addEventListener("keypress",checkKeyPress,false);
 	document.getElementById("dettagli").addEventListener("mouseover",dettagliOggetti,false);
+			$('#popoverostacolo').popover();
+	$('#popoverspada').popover();
+	$('#popoverpillola').popover();
+	$('#popoverfungo').popover();
+	$('#popovernemico1').popover();
+	$('#popovernemico2').popover();
+	$('#popoveromino').popover();
+	$('#popoverominoConSpada').popover();
+	$('#popoverportale').popover();
+	$('#popoverbuconero').popover();
+	$('#popoverchiave').popover();
+	$('#popoverporta').popover();
+	$('#popoverlaser').popover();
 });
 
 Audio.prototype.rewindAndPlay = function() { 
