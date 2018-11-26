@@ -161,7 +161,11 @@ function barraClessidra() {
 	var elem = document.getElementById("myBar");   
 	var width = 100;
 	id = setInterval(fram, 735); // per una barra che avanza con il tempo
-		function fram() { // esempi di inner function 
+		function fram() { // esempi di inner function
+			if (width==50)
+				elem.style.backgroundColor="#e1b300"
+			if (width==25)
+				elem.style.backgroundColor="#f72100"
 		if (width == 0) {
 			clearInterval(id); // TEMPO SCADUTO, gestire l'evento (per esempio game over o vita)
 			gameOver();

@@ -35,6 +35,8 @@
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 	}
+	 #centrosb {text-align: center; border: #3a8d0a; border-style: solid; border-width: 10px; height: fit-content; width: 680px; margin-left: auto; margin-right: auto;}
+	 #sfondoBarra {display:none;width: 680px; height: 30px; position: absolute; background-color: #ddd; border: 2px solid green; border-radius: 12px;}
 </style>
 <script type="text/javascript" src="js/mappa.js"></script>
 <script type="text/javascript" src="js/movimento.js"></script>
@@ -60,9 +62,12 @@
 	</p>
 	<div id="centrosb">
 		<p id="sfondoBarra"></p>
-		<p id="barraCompletamento"></p>
+		<p id="barraCompletamento"class="progress-bar progress-bar-striped progress-bar-animated" ></p>
 	</div>
-	<p id="myBar"></p>
+	<div id="centrosbarra">
+		<p id="sfondosBarra"></p>
+		<p id="myBar" class="progress-bar progress-bar-striped progress-bar-animated" ></p>
+	</div>
 	<br> <br> <br>
 	<h1 id="en">PUNTI: </h1>
 	<p id="energia">0</p>	
